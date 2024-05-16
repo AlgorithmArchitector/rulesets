@@ -1,4 +1,4 @@
-name: Generating lists for routing
+name: Generating rulesets
 
 on:
   workflow_dispatch:
