@@ -294,3 +294,4 @@ jobs:
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           message: |
             ERROR on “rule set generation”
+            Repository: ${{ github.repository }}
