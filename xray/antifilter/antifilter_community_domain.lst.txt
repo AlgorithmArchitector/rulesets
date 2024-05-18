@@ -72,6 +72,7 @@ domain:colta.ru
 domain:community.cisco.com
 domain:crunchyroll.com
 domain:czx.to
+domain:d.docs.live.net
 domain:database.clamav.net
 domain:deezer.com
 domain:dell.com
@@ -92,6 +93,7 @@ domain:edge.microsoft.com
 domain:edgeservices.bing.com
 domain:ehorussia.com
 domain:ej.ru
+domain:etsy.com
 domain:euronews.com
 domain:event.on24.com
 domain:exler.ru
@@ -137,6 +139,7 @@ domain:instagram.fkun2-1.fna.fbcdn.net
 domain:instagram.frix7-1.fna.fbcdn.net
 domain:instagram.fvno2-1.fna.fbcdn.net
 domain:intel.com
+domain:ios.chat.openai.com
 domain:island-of-pleasure.site
 domain:istories.media
 domain:kasparov.ru
@@ -175,6 +178,7 @@ domain:megapeer.ru
 domain:memohrc.org
 domain:metacritic.com
 domain:meteo.paraplan.net
+domain:mobile.events.data.microsoft.com
 domain:monster.ie
 domain:mouser.com
 domain:mrakopedia.net
