@@ -263,10 +263,8 @@ jobs:
           cd v2ray-geoip || exit 1
           go run ./
 
-      - name: Вывести список сгенерированных geosite .dat списков
+      - name: Output the list of generated geosite .dat lists
         run: |
-          echo "Содержимое папок с сгенерированными geosite .dat списками:"
-          echo ""
           echo "adaway:"
           ls ${{ github.workspace }}/my_repo/xray/adaway
           echo "------------------------------"
