@@ -308,6 +308,7 @@ domain:tvrain.ru
 domain:twitter.com
 domain:ufile.io
 domain:underver.se
+domain:unfiltered.adguard-dns.com
 domain:unian.net
 domain:uniongang.tv
 domain:velocidrone.com
