@@ -357,6 +357,7 @@ domain:www.ti.com
 domain:www.torproject.org
 domain:www.wikiart.org
 domain:www.wunderground.com
+domain:x.com
 domain:xhamster.com
 domain:xhamsterlive.com
 domain:xnxx.com
