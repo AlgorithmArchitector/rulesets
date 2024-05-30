@@ -476,6 +476,8 @@ domain:tk.mabo.ltd
 domain:tk.nvacg.org
 domain:tk1.trackerservers.com
 domain:tk1v6.trackerservers.com
+domain:tk2.trackerservers.com
+domain:tk2v6.trackerservers.com
 domain:tor.rev.pm
 domain:torrent-team.net
 domain:torrent-tracker.hama3.net
