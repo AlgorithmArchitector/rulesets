@@ -128,11 +128,11 @@ domain:hd.zetfix.online
 domain:helm.releases.hashicorp.com
 domain:holod.global.ssl.fastly.net
 domain:holod.media
+domain:hub.docker.com
 domain:hyperhost.ua
 domain:ichef.bbci.co.uk
 domain:iichan.hk
 domain:image.tmdb.org
-domain:img.youtube.com
 domain:instagram.com
 domain:instagram.fhrk1-1.fna.fbcdn.net
 domain:instagram.fkun2-1.fna.fbcdn.net
@@ -325,7 +325,6 @@ domain:weblance.com.ua
 domain:welt.de
 domain:wetransfer.com
 domain:wheather.com
-domain:wide-youtube.l.google.com
 domain:windguru.cz
 domain:wixmp.com
 domain:wunderground.com
@@ -363,7 +362,6 @@ domain:xhamsterlive.com
 domain:xnxx.com
 domain:xvideos.com
 domain:yt3.ggpht.com
-domain:ytimg.l.google.com
 domain:zetflix.online
 domain:znanija.com
 domain:zohomail.com
