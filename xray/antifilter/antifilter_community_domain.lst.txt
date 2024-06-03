@@ -234,6 +234,7 @@ domain:redis.com
 domain:redtube.com
 domain:refactoring.guru
 domain:refinitiv.com
+domain:registry.hub.docker.com
 domain:registry.terraform.io
 domain:releases.hashicorp.com
 domain:repo.mongodb.org
