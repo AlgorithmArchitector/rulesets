@@ -128,7 +128,6 @@ domain:hd.zetfix.online
 domain:helm.releases.hashicorp.com
 domain:holod.global.ssl.fastly.net
 domain:holod.media
-domain:hub.docker.com
 domain:hyperhost.ua
 domain:ichef.bbci.co.uk
 domain:iichan.hk
@@ -234,7 +233,6 @@ domain:redis.com
 domain:redtube.com
 domain:refactoring.guru
 domain:refinitiv.com
-domain:registry.hub.docker.com
 domain:registry.terraform.io
 domain:releases.hashicorp.com
 domain:repo.mongodb.org
