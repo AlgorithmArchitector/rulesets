@@ -615,6 +615,7 @@ domain:tracker.gbitt.info
 domain:tracker.gcrenwp.top
 domain:tracker.gcrreen.xyz
 domain:tracker.gigatorrents.ws
+domain:tracker.gmi.gd
 domain:tracker.grepler.com
 domain:tracker.h0me.cc
 domain:tracker.h3o2.me
@@ -660,6 +661,7 @@ domain:tracker.lyretain.site
 domain:tracker.m-team.cc
 domain:tracker.madassnews.net
 domain:tracker.merded.xyz
+domain:tracker.midnightprogrammer.net
 domain:tracker.minglong.org
 domain:tracker.mininova.org
 domain:tracker.mirrorbay.org
