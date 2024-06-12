@@ -496,6 +496,7 @@ domain:torrents.artixlinux.org
 domain:torrentsmd.com
 domain:torrenttracker.nwc.acsalaska.net
 domain:torrentzilla.org
+domain:torrust.canofsocks.com
 domain:touhou.kawaiiarts.com
 domain:tp.m-team.cc
 domain:tr.aag.moe
