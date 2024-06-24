@@ -151,6 +151,7 @@ domain:kinovod.net
 domain:kinozal.me
 domain:kinozal.tv
 domain:korrespondent.net
+domain:kpapp.link
 domain:lenovo.com
 domain:lib.rus.ec
 domain:libgen.rs
