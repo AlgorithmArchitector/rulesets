@@ -311,6 +311,7 @@ domain:underver.se
 domain:unfiltered.adguard-dns.com
 domain:unian.net
 domain:uniongang.tv
+domain:vectorworks.net
 domain:velocidrone.com
 domain:verstka.media
 domain:vhd.zetflix.online
