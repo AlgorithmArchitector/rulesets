@@ -729,6 +729,7 @@ domain:tracker.swarm3.network
 domain:tracker.swateam.org.uk
 domain:tracker.swifte.space
 domain:tracker.sylphix.com
+domain:tracker.t-1.org
 domain:tracker.t-rb.org
 domain:tracker.tambovnet.org
 domain:tracker.tamersunion.org
@@ -788,6 +789,7 @@ domain:tracker1.ctix.cn
 domain:tracker1.itzmx.com
 domain:tracker1.loli.co.nz
 domain:tracker1.myporn.club
+domain:tracker1.t-1.org
 domain:tracker1.wimix.org
 domain:tracker2.520.jp
 domain:tracker2.christianbro.pw
@@ -799,6 +801,7 @@ domain:tracker2.itzmx.com
 domain:tracker3.520.jp
 domain:tracker3.ctix.cn
 domain:tracker3.itzmx.com
+domain:tracker3.t-1.org
 domain:tracker4.itzmx.com
 domain:tracker6.dler.org
 domain:tracker6.lelux.fi
