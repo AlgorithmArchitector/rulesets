@@ -114,7 +114,6 @@ domain:forum.voynaplemyon.com
 domain:gallery.zetalliance.org
 domain:geni.us
 domain:genius.com
-domain:ggpht.com
 domain:gitlab.io
 domain:gllto.glpals.com
 domain:gnome-look.org
