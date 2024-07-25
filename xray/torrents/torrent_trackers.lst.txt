@@ -61,6 +61,7 @@ domain:atrack.pow7.com
 domain:axell24.ru
 domain:baibako.tv
 domain:bananas.space
+domain:bandito.byterunner.io
 domain:bclearning.top
 domain:bedro.cloud
 domain:ben.kerbertools.xyz
@@ -538,6 +539,7 @@ domain:tracker.aibt.xyz
 domain:tracker.aletorrenty.pl
 domain:tracker.ali213.net
 domain:tracker.altrosky.nl
+domain:tracker.amelia.fun
 domain:tracker.anima.nz
 domain:tracker.anirena.com
 domain:tracker.anonwebz.xyz
