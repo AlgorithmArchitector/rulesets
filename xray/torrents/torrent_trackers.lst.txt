@@ -398,7 +398,9 @@ domain:retracker.nts.su
 domain:retracker.seven-sky.net
 domain:retracker.sevstar.net
 domain:retracker.spark-rostov.ru
+domain:retracker.x2k.ru
 domain:retracker01-msk-virt.corbina.net
+domain:retracker2.x2k.ru
 domain:rfc5746.mywaifu.best
 domain:rt.optizone.ru
 domain:rt.tace.ru
