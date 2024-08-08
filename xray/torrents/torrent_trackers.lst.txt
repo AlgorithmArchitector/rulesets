@@ -75,6 +75,7 @@ domain:bitseduce.com
 domain:bitsparadise.info
 domain:bittorrent-tracker.e-n-c-r-y-p-t.net
 domain:bittorrent.gongt.net
+domain:bittorrent.service.gongt.me
 domain:biztorrents.com
 domain:bjlt.zhuqiy.eu.org
 domain:black-bird.ynh.fr
