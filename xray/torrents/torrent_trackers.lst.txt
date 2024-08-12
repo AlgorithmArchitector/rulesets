@@ -494,6 +494,7 @@ domain:torrent.nwps.ws
 domain:torrent.resonatingmedia.com
 domain:torrent.skynetcenter.me
 domain:torrent.tdjs.tech
+domain:torrent.tracker.durukanbal.com
 domain:torrentclub.space
 domain:torrentclub.tech
 domain:torrents-nn.cn
