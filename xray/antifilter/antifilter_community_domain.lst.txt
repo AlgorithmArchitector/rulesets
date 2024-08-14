@@ -78,6 +78,7 @@ domain:deezer.com
 domain:dell.com
 domain:deviantart.com
 domain:devops.com
+domain:digitalocean.com
 domain:dist.torproject.org
 domain:docker.elastic.co
 domain:docs.redis.com
@@ -204,6 +205,7 @@ domain:onlineradiobox.com
 domain:onlinesim.ru
 domain:open.spotify.com
 domain:openai.com
+domain:openwrt.wk.cz
 domain:os.mbed.com
 domain:ovdinfo.org
 domain:packages.gitlab.com
