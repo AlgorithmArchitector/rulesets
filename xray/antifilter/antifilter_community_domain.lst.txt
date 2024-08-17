@@ -124,6 +124,7 @@ domain:gordonua.com
 domain:grammarly.com
 domain:grazie.ai
 domain:gulagu.net
+domain:habr.com
 domain:hd.zetfix.online
 domain:helm.releases.hashicorp.com
 domain:holod.global.ssl.fastly.net
