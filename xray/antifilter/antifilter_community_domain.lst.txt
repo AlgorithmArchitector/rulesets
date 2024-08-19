@@ -353,6 +353,7 @@ domain:www.lostfilm.tv
 domain:www.lostfilmtv5.site
 domain:www.microchip.com
 domain:www.moscowtimes.ru
+domain:www.mouser.com
 domain:www.postfix.org
 domain:www.qualcomm.com
 domain:www.smashwords.com
