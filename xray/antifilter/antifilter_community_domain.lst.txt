@@ -345,6 +345,7 @@ domain:www.dell.com
 domain:www.digitalocean.com
 domain:www.dw.com
 domain:www.grammarly.com
+domain:www.hetzner.com
 domain:www.hrw.org
 domain:www.intel.com
 domain:www.jabra.com

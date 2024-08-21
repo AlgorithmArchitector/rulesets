@@ -524,6 +524,7 @@ domain:tr2.cubonegro.lol
 domain:tr2.ysagin.top
 domain:track.plop.pm
 domain:track3r.site
+domain:trackarr.org
 domain:tracker-cn.zhuqiy.eu.org
 domain:tracker-udp.gbitt.info
 domain:tracker-us.silksa.co.za
