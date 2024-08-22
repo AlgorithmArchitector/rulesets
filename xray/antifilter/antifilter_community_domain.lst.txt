@@ -360,6 +360,7 @@ domain:www.postfix.org
 domain:www.qualcomm.com
 domain:www.smashwords.com
 domain:www.stalker2.com
+domain:www.support.xerox.com
 domain:www.the-village.ru
 domain:www.themoviedb.org
 domain:www.ti.com
