@@ -17,8 +17,10 @@ domain:agents.media
 domain:agentura.ru
 domain:alberta.ca
 domain:anilibria.tv
+domain:antizapret.prostovpn.org
 domain:api.app.prod.grazie.aws.intellij.net
 domain:api.github.com
+domain:api.githubcopilot.com
 domain:api.home-connect.com
 domain:api.openai.com
 domain:api.protonmail.ch
@@ -70,6 +72,7 @@ domain:cloud.mongodb.com
 domain:cloudflare-dns.com
 domain:colta.ru
 domain:community.cisco.com
+domain:copilot-proxy.githubusercontent.com
 domain:crunchyroll.com
 domain:czx.to
 domain:d.docs.live.net
