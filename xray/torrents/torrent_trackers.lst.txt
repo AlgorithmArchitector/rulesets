@@ -414,6 +414,7 @@ domain:sanincode.com
 domain:sd-161673.dedibox.fr
 domain:secure.pow7.com
 domain:seedpeer.net
+domain:serpb.vpsburti.com
 domain:shadowshq.eddie4.nl
 domain:shadowshq.yi.org
 domain:shahidrazi.online
