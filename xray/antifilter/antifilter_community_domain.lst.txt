@@ -57,6 +57,7 @@ domain:bt3.t-ru.org
 domain:bt4.t-ru.org
 domain:builds.parsec.app
 domain:canva.com
+domain:cdn.id.supercell.com
 domain:cdn.oaistatic.com
 domain:cdninstagram.com
 domain:certifytheweb.com
@@ -117,6 +118,7 @@ domain:forklog.com
 domain:formula1.com
 domain:forum.voynaplemyon.com
 domain:gallery.zetalliance.org
+domain:game.brawlstarsgame.com
 domain:geni.us
 domain:genius.com
 domain:gitlab.io
@@ -270,6 +272,7 @@ domain:sebeanus.online
 domain:secure-web.cisco.com
 domain:seedoff.zannn.top
 domain:semnasem.org
+domain:sentry.io
 domain:serpstat.com
 domain:singlekey-id.com
 domain:skladchik.com

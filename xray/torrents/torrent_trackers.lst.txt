@@ -150,6 +150,7 @@ domain:cutiegirl.ru
 domain:cutscloud.duckdns.org
 domain:d40969.acod.regrucolo.ru
 domain:data-bg.net
+domain:dataforai.com
 domain:datascene.net
 domain:daveking.com
 domain:davidkirkevans.com
