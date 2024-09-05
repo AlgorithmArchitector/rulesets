@@ -280,6 +280,7 @@ domain:skyscanner.com
 domain:slideshare.net
 domain:soapui.org
 domain:sobesednik.ru
+domain:software.cisco.com
 domain:soundcloud.com
 domain:spotify.com
 domain:st.kinovod.net
@@ -326,6 +327,7 @@ domain:unian.net
 domain:uniongang.tv
 domain:vectorworks.net
 domain:velocidrone.com
+domain:veritas.com
 domain:verstka.media
 domain:vhd.zetflix.online
 domain:video.twimg.com
