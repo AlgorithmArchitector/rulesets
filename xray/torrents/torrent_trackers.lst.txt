@@ -280,6 +280,7 @@ domain:mail2.zelenaya.net
 domain:market-re.quest
 domain:martin-gebhardt.eu
 domain:masters-tb.com
+domain:mc.itscraftsoftware.my.id
 domain:mediaclub.tv
 domain:megatorrents.kg
 domain:metal.iplay.ro
@@ -647,6 +648,7 @@ domain:tracker.ipv6tracker.org
 domain:tracker.ipv6tracker.ru
 domain:tracker.iriseden.fr
 domain:tracker.iro.moe
+domain:tracker.itscraftsoftware.my.id
 domain:tracker.jamesthebard.net
 domain:tracker.jdx3.org
 domain:tracker.jiesen.life
