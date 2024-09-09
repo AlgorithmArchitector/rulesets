@@ -246,6 +246,7 @@ domain:jeremylee.sh
 domain:jp.moeweb.pw
 domain:jsb.by
 domain:jutone.com
+domain:jvavav.com
 domain:k.avc.cx
 domain:k1.com.br
 domain:kanal-4.de
