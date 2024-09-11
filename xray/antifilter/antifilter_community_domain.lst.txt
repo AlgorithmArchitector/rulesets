@@ -117,6 +117,8 @@ domain:fork.pet
 domain:forklog.com
 domain:formula1.com
 domain:forum.voynaplemyon.com
+domain:fw-download.ubnt.com
+domain:fw-update.ubnt.com
 domain:gallery.zetalliance.org
 domain:game.brawlstarsgame.com
 domain:geni.us
