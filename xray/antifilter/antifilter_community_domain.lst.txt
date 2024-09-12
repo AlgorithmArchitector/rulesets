@@ -235,6 +235,7 @@ domain:piccy.info
 domain:pixiv.net
 domain:plab.site
 domain:platform.twitter.com
+domain:plugins.jetbrains.com
 domain:polit.ru
 domain:pornolab.net
 domain:portal.bgpmon.net

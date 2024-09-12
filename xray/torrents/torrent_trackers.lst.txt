@@ -526,6 +526,7 @@ domain:tr.ready4.icu
 domain:tr.torland.ga
 domain:tr2.cubonegro.lol
 domain:tr2.ysagin.top
+domain:tr4ck3r.duckdns.org
 domain:track.plop.pm
 domain:track3r.site
 domain:trackarr.org
