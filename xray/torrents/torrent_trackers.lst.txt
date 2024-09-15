@@ -148,6 +148,7 @@ domain:connect.swifte.space
 domain:creative.7o7.cx
 domain:cutiegirl.ru
 domain:cutscloud.duckdns.org
+domain:d13bttrck.duckdns.org
 domain:d40969.acod.regrucolo.ru
 domain:data-bg.net
 domain:dataforai.com
