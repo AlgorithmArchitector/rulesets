@@ -282,6 +282,7 @@ domain:mail2.zelenaya.net
 domain:market-re.quest
 domain:martin-gebhardt.eu
 domain:masters-tb.com
+domain:mathkangaroo.jp
 domain:mc.itscraftsoftware.my.id
 domain:mediaclub.tv
 domain:megatorrents.kg
@@ -569,6 +570,7 @@ domain:tracker.bitsearch.to
 domain:tracker.bittor.pw
 domain:tracker.bittorrent.am
 domain:tracker.bittorrent.nibblepoker.lu
+domain:tracker.bjut.jp
 domain:tracker.blacksparrowmedia.net
 domain:tracker.breizh.pm
 domain:tracker.bt-hash.com
@@ -634,6 +636,7 @@ domain:tracker.gcrreen.xyz
 domain:tracker.gigatorrents.ws
 domain:tracker.gmi.gd
 domain:tracker.grepler.com
+domain:tracker.guguan.000.pe
 domain:tracker.h0me.cc
 domain:tracker.h3o2.me
 domain:tracker.halfchub.club
@@ -783,6 +786,7 @@ domain:tracker.vectahosting.eu
 domain:tracker.vraphim.com
 domain:tracker.vrpnet.org
 domain:tracker.vulnix.sh
+domain:tracker.waaa.moe
 domain:tracker.wellknownclub.net
 domain:tracker.xor.st
 domain:tracker.yangxiaoguozi.cn
