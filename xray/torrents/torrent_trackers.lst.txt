@@ -51,6 +51,7 @@ domain:anzix.net
 domain:api.alarmasqueretaro.com
 domain:api.bitumconference.ru
 domain:api.boletera.org
+domain:api.ipv4online.uk
 domain:app.icon256.com
 domain:appmeter.ru
 domain:aruacfilmes.com.br
@@ -666,6 +667,8 @@ domain:tracker.k.vu
 domain:tracker.kali.org
 domain:tracker.kamigami.org
 domain:tracker.kawaii.id
+domain:tracker.kmzs123.com
+domain:tracker.kmzs123.top
 domain:tracker.kuroy.me
 domain:tracker.leech.ie
 domain:tracker.leechers-paradise.org
