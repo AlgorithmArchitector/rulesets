@@ -542,6 +542,7 @@ domain:tracker-zhuqiy.dgj055.icu
 domain:tracker.0o.is
 domain:tracker.0x.tf
 domain:tracker.0x7c0.com
+domain:tracker.1048576.cn
 domain:tracker.3304399.com
 domain:tracker.36dm.com
 domain:tracker.3moredays.com
@@ -667,6 +668,7 @@ domain:tracker.k.vu
 domain:tracker.kali.org
 domain:tracker.kamigami.org
 domain:tracker.kawaii.id
+domain:tracker.kmzs123.cn
 domain:tracker.kmzs123.com
 domain:tracker.kmzs123.top
 domain:tracker.kuroy.me
