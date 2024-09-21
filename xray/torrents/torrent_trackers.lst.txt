@@ -668,6 +668,7 @@ domain:tracker.k.vu
 domain:tracker.kali.org
 domain:tracker.kamigami.org
 domain:tracker.kawaii.id
+domain:tracker.kmzs123.cf
 domain:tracker.kmzs123.cn
 domain:tracker.kmzs123.com
 domain:tracker.kmzs123.top
