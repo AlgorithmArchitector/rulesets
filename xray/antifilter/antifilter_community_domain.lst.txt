@@ -109,7 +109,6 @@ domain:fbcdn.net
 domain:fbsbx.com
 domain:fex.net
 domain:files.oaiusercontent.com
-domain:filmix.biz
 domain:firefly-ps.adobe.io
 domain:flibusta.is
 domain:fluke.com
