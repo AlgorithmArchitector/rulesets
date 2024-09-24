@@ -671,6 +671,7 @@ domain:tracker.kawaii.id
 domain:tracker.kmzs123.cf
 domain:tracker.kmzs123.cn
 domain:tracker.kmzs123.com
+domain:tracker.kmzs123.tk
 domain:tracker.kmzs123.top
 domain:tracker.kuroy.me
 domain:tracker.leech.ie
