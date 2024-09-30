@@ -636,6 +636,7 @@ domain:tracker.funfile.org
 domain:tracker.gbitt.info
 domain:tracker.gcrenwp.top
 domain:tracker.gcrreen.xyz
+domain:tracker.gigantino.net
 domain:tracker.gigatorrents.ws
 domain:tracker.gmi.gd
 domain:tracker.grepler.com
