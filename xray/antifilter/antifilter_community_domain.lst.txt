@@ -69,6 +69,7 @@ domain:chess.com
 domain:cisco.com
 domain:citrix.com
 domain:clamav.net
+domain:claude.ai
 domain:cloud.mongodb.com
 domain:cloudflare-dns.com
 domain:colta.ru
@@ -214,7 +215,6 @@ domain:omv-extras.org
 domain:onlineradiobox.com
 domain:onlinesim.ru
 domain:open.spotify.com
-domain:openai.com
 domain:openwrt.wk.cz
 domain:os.mbed.com
 domain:ovdinfo.org
