@@ -329,6 +329,7 @@ domain:unfiltered.adguard-dns.com
 domain:unian.net
 domain:uniongang.tv
 domain:vectorworks.net
+domain:veeam.com
 domain:velocidrone.com
 domain:veritas.com
 domain:verstka.media
