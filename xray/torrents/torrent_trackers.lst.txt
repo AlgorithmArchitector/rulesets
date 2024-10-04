@@ -530,6 +530,7 @@ domain:tr.ready4.icu
 domain:tr.torland.ga
 domain:tr1.aag.moe
 domain:tr2.cubonegro.lol
+domain:tr2.trkb.ru
 domain:tr2.ysagin.top
 domain:tr4ck3r.duckdns.org
 domain:track.plop.pm
