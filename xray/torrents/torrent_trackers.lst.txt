@@ -585,6 +585,7 @@ domain:tracker.bulao.ren
 domain:tracker.bz
 domain:tracker.cangku.moe
 domain:tracker.ccp.ovh
+domain:tracker.cloaka.xyz
 domain:tracker.cloudit.top
 domain:tracker.computel.fr
 domain:tracker.coppersurfer.site
