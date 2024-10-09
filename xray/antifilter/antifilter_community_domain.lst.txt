@@ -84,6 +84,13 @@ domain:dell.com
 domain:deviantart.com
 domain:devops.com
 domain:digitalocean.com
+domain:discord.com
+domain:discord.gg
+domain:discord.media
+domain:discordapp.com
+domain:discordapp.io
+domain:discordapp.org
+domain:discordstatus.com
 domain:dist.torproject.org
 domain:docker.elastic.co
 domain:docs.redis.com
@@ -121,6 +128,7 @@ domain:fw-download.ubnt.com
 domain:fw-update.ubnt.com
 domain:gallery.zetalliance.org
 domain:game.brawlstarsgame.com
+domain:gateway.discord.gg
 domain:geni.us
 domain:genius.com
 domain:gitlab.io
@@ -142,6 +150,7 @@ domain:ichef.bbci.co.uk
 domain:id.cisco.com
 domain:iichan.hk
 domain:image.tmdb.org
+domain:images.discordapp.net
 domain:instagram.com
 domain:instagram.fhrk1-1.fna.fbcdn.net
 domain:instagram.fkun2-1.fna.fbcdn.net
@@ -291,6 +300,7 @@ domain:static-ss.xvideos-cdn.com
 domain:static.cdninstagram.com
 domain:static.files.bbci.co.uk
 domain:static.rutracker.cc
+domain:status.discordapp.com
 domain:strava.com
 domain:stulchik.net
 domain:support.cambiumnetworks.com
