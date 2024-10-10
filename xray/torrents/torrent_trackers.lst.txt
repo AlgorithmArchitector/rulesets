@@ -438,6 +438,7 @@ domain:smurfsoft.com
 domain:socket.onvo.me
 domain:soundmovie.ru
 domain:soysta-fr1.dev.sercomkc.org
+domain:sparkle.ghostchu-services.top
 domain:srv5.digiboy.ir
 domain:ssb14.nohost.me
 domain:stargrave.org
