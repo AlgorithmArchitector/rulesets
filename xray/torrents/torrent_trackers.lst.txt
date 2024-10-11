@@ -51,6 +51,7 @@ domain:anzix.net
 domain:api.alarmasqueretaro.com
 domain:api.bitumconference.ru
 domain:api.boletera.org
+domain:api.clasificadosrapidos.com
 domain:api.ipv4online.uk
 domain:app.icon256.com
 domain:appmeter.ru
