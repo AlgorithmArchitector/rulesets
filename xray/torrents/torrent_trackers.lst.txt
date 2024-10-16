@@ -358,6 +358,7 @@ domain:opentracker.lingyurouqing.xyz
 domain:opentracker.xyz
 domain:openwrt.lingyurouqing.xyz
 domain:p2p.0g.cx
+domain:p2p.azu.red
 domain:p2p.publictracker.xyz
 domain:p4p.arenabg.com
 domain:p5796a22a.dip0.t-ipconnect.de
