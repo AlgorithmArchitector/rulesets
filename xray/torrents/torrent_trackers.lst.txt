@@ -535,6 +535,7 @@ domain:tr1.aag.moe
 domain:tr2.cubonegro.lol
 domain:tr2.trkb.ru
 domain:tr2.ysagin.top
+domain:tr3.ysagin.top
 domain:tr4ck3r.duckdns.org
 domain:track.plop.pm
 domain:track3r.site
@@ -668,6 +669,7 @@ domain:tracker.itscraftsoftware.my.id
 domain:tracker.jamesthebard.net
 domain:tracker.jdx3.org
 domain:tracker.jiesen.life
+domain:tracker.jobser.eu
 domain:tracker.jonaslsa.com
 domain:tracker.jordan.im
 domain:tracker.joybomb.tw
