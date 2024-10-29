@@ -7,6 +7,7 @@ domain:abs-0.twimg.com
 domain:abs-zero.twimg.com
 domain:abs.twimg.com
 domain:account-api.protonmail.com
+domain:account.jetbrains.com
 domain:account.protonmail.com
 domain:accounts.spotify.com
 domain:adguard.com
