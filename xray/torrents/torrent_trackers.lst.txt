@@ -244,6 +244,7 @@ domain:ipv6.tracker.harry.lu
 domain:ipv6.tracker.monitorit4.me
 domain:ipv6.tracker.zerobytes.xyz
 domain:isk.richardsw.club
+domain:ismaarino.com
 domain:itera.bz
 domain:jeremylee.sh
 domain:jp.moeweb.pw
@@ -419,6 +420,7 @@ domain:run.publictracker.xyz
 domain:rutorrent.frontline-mod.com
 domain:ryjer.com
 domain:sabross.xyz
+domain:saltwood.top
 domain:sanincode.com
 domain:sd-161673.dedibox.fr
 domain:secure.pow7.com
