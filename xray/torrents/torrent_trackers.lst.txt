@@ -23,6 +23,7 @@ domain:6.pocketnet.app
 domain:61626c.net
 domain:62-210-114-129.rev.poneytelecom.eu
 domain:6ahddutb1ucc3cp.ru
+domain:7p41a8967.wicp.vip
 domain:8.beyondth.cn
 domain:9.rarbg.com
 domain:9.rarbg.me
