@@ -250,6 +250,7 @@ domain:pornolab.net
 domain:portal.bgpmon.net
 domain:proekt.media
 domain:protonmail.com
+domain:proxy.individual.githubcopilot.com
 domain:quora.com
 domain:radarr.servarr.com
 domain:radiosvoboda.org

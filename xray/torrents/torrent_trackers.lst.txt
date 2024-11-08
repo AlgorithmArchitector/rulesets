@@ -547,6 +547,7 @@ domain:tr.qfruiti.com
 domain:tr.qfruiti.in
 domain:tr.ready4.icu
 domain:tr.torland.ga
+domain:tr.zukizuki.org
 domain:tr1.aag.moe
 domain:tr2.cubonegro.lol
 domain:tr2.trkb.ru
