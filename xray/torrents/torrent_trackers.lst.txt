@@ -503,6 +503,7 @@ domain:threads.canofsocks.com
 domain:thug.rocks
 domain:tinfoil.space
 domain:tk.greedland.net
+domain:tk.leechshield.link
 domain:tk.mabo.ltd
 domain:tk.nvacg.org
 domain:tk1.trackerservers.com
