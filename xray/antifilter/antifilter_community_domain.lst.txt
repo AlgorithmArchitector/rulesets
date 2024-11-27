@@ -1,6 +1,7 @@
 domain:10minutemail.com
 domain:1337x.to
 domain:4pda.ru
+domain:7tv.app
 domain:ab.chatgpt.com
 domain:abook-club.ru
 domain:abs-0.twimg.com
