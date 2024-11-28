@@ -257,6 +257,7 @@ domain:radarr.servarr.com
 domain:radiosvoboda.org
 domain:raw-data.gitlab.io
 domain:redis.com
+domain:redis.io
 domain:redtube.com
 domain:refactoring.guru
 domain:refinitiv.com
