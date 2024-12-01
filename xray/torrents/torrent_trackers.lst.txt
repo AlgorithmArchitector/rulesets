@@ -820,6 +820,7 @@ domain:tracker.tvunderground.org.ru
 domain:tracker.uraniumhexafluori.de
 domain:tracker.uw0.xyz
 domain:tracker.v6speed.org
+domain:tracker.valete.tf
 domain:tracker.vanitycore.co
 domain:tracker.vds.nz
 domain:tracker.vectahosting.eu
