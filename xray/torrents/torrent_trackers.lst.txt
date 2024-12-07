@@ -837,6 +837,7 @@ domain:tracker.yemekyedim.com
 domain:tracker.ygsub.com
 domain:tracker.yoshi210.com
 domain:tracker.yuelili.com
+domain:tracker.yume-hatsuyuki.moe
 domain:tracker.zaluan.xyz
 domain:tracker.zekun.fun
 domain:tracker.zemoj.com
