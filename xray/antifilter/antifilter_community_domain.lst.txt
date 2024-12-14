@@ -162,6 +162,7 @@ domain:intel.com
 domain:ios.chat.openai.com
 domain:island-of-pleasure.site
 domain:istories.media
+domain:jut.su
 domain:kasparov.ru
 domain:kavkaz-uzel.eu
 domain:kemono.party
@@ -348,6 +349,7 @@ domain:velocidrone.com
 domain:veritas.com
 domain:verstka.media
 domain:vhd.zetflix.online
+domain:viber.com
 domain:video.twimg.com
 domain:vipdrive.net
 domain:vot-tak.tv
