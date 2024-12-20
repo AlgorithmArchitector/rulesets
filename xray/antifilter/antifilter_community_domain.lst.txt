@@ -94,6 +94,7 @@ domain:discordapp.io
 domain:discordapp.org
 domain:discordstatus.com
 domain:dist.torproject.org
+domain:dl.discordapp.net
 domain:docker.elastic.co
 domain:docs.redis.com
 domain:documentation.meraki.com
