@@ -891,6 +891,7 @@ domain:u4.trakx.crim.ist
 domain:u6.trakx.crim.ist
 domain:uatracker.net
 domain:udp-tracker.shittyurl.org
+domain:udp.tracker.projectk.org
 domain:udp.yarr.pt
 domain:ultra.zt.ua
 domain:unit193.net
