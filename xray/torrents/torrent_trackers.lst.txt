@@ -544,6 +544,7 @@ domain:tr.doogh.club
 domain:tr.fuckbitcoin.xyz
 domain:tr.highstar.shop
 domain:tr.kxmp.cf
+domain:tr.movian.eu
 domain:tr.nyacat.pw
 domain:tr.qfruiti.com
 domain:tr.qfruiti.in
