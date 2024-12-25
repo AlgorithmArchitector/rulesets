@@ -152,6 +152,7 @@ domain:code2chicken.nl
 domain:commento.getblog.cn
 domain:concen.org
 domain:connect.swifte.space
+domain:cq.kmzs123.cn
 domain:creative.7o7.cx
 domain:cutiegirl.ru
 domain:cutscloud.duckdns.org
