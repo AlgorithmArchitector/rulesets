@@ -95,6 +95,7 @@ domain:box.ossete.eu.org
 domain:boysbitte.be
 domain:brokenstones.is
 domain:bruh.cluster.ws
+domain:bry-dell-htpc.freeddns.org
 domain:bt-club.ws
 domain:bt-tracker.gamexp.ru
 domain:bt.080609.xyz
