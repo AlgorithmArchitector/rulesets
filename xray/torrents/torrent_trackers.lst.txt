@@ -670,6 +670,7 @@ domain:tracker.gigatorrents.ws
 domain:tracker.gmi.gd
 domain:tracker.grepler.com
 domain:tracker.guguan.000.pe
+domain:tracker.guguan.us.kg
 domain:tracker.h0me.cc
 domain:tracker.h3o2.me
 domain:tracker.halfchub.club
