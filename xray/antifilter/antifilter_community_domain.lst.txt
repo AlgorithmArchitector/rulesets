@@ -169,6 +169,7 @@ domain:kavkaz-uzel.eu
 domain:kemono.party
 domain:kino.pub
 domain:kinobase.org
+domain:kinogo.ec
 domain:kinokopilka.pro
 domain:kinovod.net
 domain:kinozal.me
