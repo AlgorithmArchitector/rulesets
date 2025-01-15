@@ -1,6 +1,6 @@
 domain:10minutemail.com
 domain:1337x.to
-domain:4pda.ru
+domain:4pda.to
 domain:7tv.app
 domain:ab.chatgpt.com
 domain:abook-club.ru
@@ -230,6 +230,7 @@ domain:onlineradiobox.com
 domain:onlinesim.ru
 domain:open.spotify.com
 domain:openwrt.wk.cz
+domain:orbit-games.com
 domain:os.mbed.com
 domain:ovdinfo.org
 domain:packages.gitlab.com
@@ -293,6 +294,7 @@ domain:seedoff.zannn.top
 domain:semnasem.org
 domain:sentry.io
 domain:serpstat.com
+domain:siemens-home.bsh-group.com
 domain:singlekey-id.com
 domain:skladchik.com
 domain:skyscanner.com
@@ -398,6 +400,7 @@ domain:www.torproject.org
 domain:www.wikiart.org
 domain:www.wunderground.com
 domain:x.com
+domain:xerox.com
 domain:xhamster.com
 domain:xhamsterlive.com
 domain:xnxx.com
