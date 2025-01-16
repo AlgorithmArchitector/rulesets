@@ -110,6 +110,7 @@ domain:edge.microsoft.com
 domain:edgeservices.bing.com
 domain:ehorussia.com
 domain:ej.ru
+domain:envato.com
 domain:etsy.com
 domain:euronews.com
 domain:event.on24.com
@@ -211,6 +212,7 @@ domain:my.atlassian.com
 domain:myworld-portal.leica-geosystems.com
 domain:nasvsehtoshnit.ru
 domain:navalny.com
+domain:netapp.com
 domain:netflix.com
 domain:news.google.com
 domain:newstudio.tv
@@ -299,6 +301,7 @@ domain:singlekey-id.com
 domain:skladchik.com
 domain:skyscanner.com
 domain:slideshare.net
+domain:snapmagic.com
 domain:soapui.org
 domain:sobesednik.ru
 domain:software.cisco.com
