@@ -30,6 +30,7 @@ domain:api.radarr.video
 domain:api.themoviedb.org
 domain:api.twitter.com
 domain:aplawrence.com
+domain:app.4pda.to
 domain:app.m3u.in
 domain:app.paraswap.io
 domain:app.zerossl.com
