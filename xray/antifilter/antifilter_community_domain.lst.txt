@@ -123,6 +123,7 @@ domain:fbsbx.com
 domain:fex.net
 domain:files.oaiusercontent.com
 domain:firefly-ps.adobe.io
+domain:flashscore.com
 domain:flibusta.is
 domain:fluke.com
 domain:fork.pet
