@@ -836,6 +836,7 @@ domain:tracker.vrpnet.org
 domain:tracker.vulnix.sh
 domain:tracker.waaa.moe
 domain:tracker.wellknownclub.net
+domain:tracker.wsaoa.eu.org
 domain:tracker.xiaoduola.xyz
 domain:tracker.xor.st
 domain:tracker.yangxiaoguozi.cn
