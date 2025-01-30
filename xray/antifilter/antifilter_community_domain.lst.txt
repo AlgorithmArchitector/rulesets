@@ -18,6 +18,7 @@ domain:aftermarket.zf.com
 domain:agents.media
 domain:agentura.ru
 domain:alberta.ca
+domain:amnezia.org
 domain:anilibria.tv
 domain:antizapret.prostovpn.org
 domain:api.app.prod.grazie.aws.intellij.net
@@ -152,6 +153,7 @@ domain:hd.zetfix.online
 domain:helm.releases.hashicorp.com
 domain:holod.global.ssl.fastly.net
 domain:holod.media
+domain:honeywell.com
 domain:hyperhost.ua
 domain:ichef.bbci.co.uk
 domain:id.cisco.com
