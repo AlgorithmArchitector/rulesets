@@ -81,6 +81,7 @@ domain:colta.ru
 domain:community.cisco.com
 domain:copilot-proxy.githubusercontent.com
 domain:crunchyroll.com
+domain:cub.red
 domain:czx.to
 domain:d.docs.live.net
 domain:database.clamav.net
