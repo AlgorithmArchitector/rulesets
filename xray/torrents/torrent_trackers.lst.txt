@@ -121,6 +121,7 @@ domain:bt.zlofenix.org
 domain:bt1.archive.org
 domain:bt1.letpo.com
 domain:bt1.xxxxbt.cc
+domain:bt2.080609.xyz
 domain:bt2.54new.com
 domain:bt2.archive.org
 domain:bt2.edwardk.info
