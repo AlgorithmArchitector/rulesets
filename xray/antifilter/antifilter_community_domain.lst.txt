@@ -49,6 +49,7 @@ domain:bard.google.com
 domain:bbc.co.uk
 domain:bbc.com
 domain:bbci.co.uk
+domain:bestchange.ru
 domain:bitbucket.org
 domain:bitcoin.org
 domain:bitru.org
