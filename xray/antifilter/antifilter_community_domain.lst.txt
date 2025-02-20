@@ -149,6 +149,7 @@ domain:googletagmanager.com
 domain:gordonua.com
 domain:grammarly.com
 domain:grazie.ai
+domain:grok.com
 domain:gulagu.net
 domain:habr.com
 domain:hd.zetfix.online
