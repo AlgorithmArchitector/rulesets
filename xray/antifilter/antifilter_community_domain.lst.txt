@@ -49,7 +49,6 @@ domain:bard.google.com
 domain:bbc.co.uk
 domain:bbc.com
 domain:bbci.co.uk
-domain:bestchange.ru
 domain:bitbucket.org
 domain:bitcoin.org
 domain:bitru.org
@@ -228,6 +227,7 @@ domain:newtimes.ru
 domain:nih.gov
 domain:nnmclub.to
 domain:nordvpn.com
+domain:notepad-plus-plus.org
 domain:novayagazeta.eu
 domain:novayagazeta.ru
 domain:ntc.party
