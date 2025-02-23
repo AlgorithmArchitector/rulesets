@@ -94,6 +94,7 @@ domain:bobbialbano.com
 domain:bot.ponomar-sibir.ru
 domain:box.ossete.eu.org
 domain:boysbitte.be
+domain:brokenhelix.loseyourip.com
 domain:brokenstones.is
 domain:bruh.cluster.ws
 domain:bry-dell-htpc.freeddns.org

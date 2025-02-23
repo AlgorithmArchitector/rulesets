@@ -410,6 +410,7 @@ domain:www.ti.com
 domain:www.torproject.org
 domain:www.wikiart.org
 domain:www.wunderground.com
+domain:x.ai
 domain:x.com
 domain:xerox.com
 domain:xhamster.com
