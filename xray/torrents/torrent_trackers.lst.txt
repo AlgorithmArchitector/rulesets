@@ -853,6 +853,7 @@ domain:tracker.zaluan.xyz
 domain:tracker.zekun.fun
 domain:tracker.zemoj.com
 domain:tracker.zerobytes.xyz
+domain:tracker.zhuqiy.top
 domain:tracker.zum.bi
 domain:tracker0.ufibox.com
 domain:tracker01.loveapp.com
