@@ -99,6 +99,7 @@ domain:brokenstones.is
 domain:bruh.cluster.ws
 domain:bry-dell-htpc.freeddns.org
 domain:bt-club.ws
+domain:bt-tracker.devnak.win
 domain:bt-tracker.gamexp.ru
 domain:bt.080609.xyz
 domain:bt.3dmgame.com
@@ -285,6 +286,7 @@ domain:lloria.fr
 domain:ln.mtahost.co
 domain:lopatins.ru
 domain:loushao.net
+domain:lucke.fenesisu.moe
 domain:lulz.vpndb.org
 domain:luna.jae.su
 domain:madiator.com
