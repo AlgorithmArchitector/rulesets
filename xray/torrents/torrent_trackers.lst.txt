@@ -15,11 +15,13 @@ domain:3.tracker.eu.org
 domain:337hhh.tpddns.cn
 domain:337hhh.xyz
 domain:3rt.tace.ru
+domain:4.tracker.devnak.win
 domain:47.ip-51-68-199.eu
 domain:504e163a.host.njalla.net
 domain:5rt.tace.ru
 domain:6.beyondth.cn
 domain:6.pocketnet.app
+domain:6.tracker.devnak.win
 domain:61626c.net
 domain:62-210-114-129.rev.poneytelecom.eu
 domain:6ahddutb1ucc3cp.ru
