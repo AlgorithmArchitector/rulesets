@@ -579,6 +579,7 @@ domain:tracker.0o.is
 domain:tracker.0x.tf
 domain:tracker.0x7c0.com
 domain:tracker.1048576.cn
+domain:tracker.23794.top
 domain:tracker.3304399.com
 domain:tracker.36dm.com
 domain:tracker.3moredays.com
@@ -897,6 +898,7 @@ domain:transkaroo.joustasie.net
 domain:tribalmixes.com
 domain:tronml.cf
 domain:trun.tom.ru
+domain:trunker.ghostchu-services.top
 domain:ts.populargamers.co.za
 domain:tsundere.pw
 domain:ttk.pp.ua
