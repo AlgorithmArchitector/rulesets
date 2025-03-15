@@ -527,6 +527,7 @@ domain:torrent-team.net
 domain:torrent-tracker.hama3.net
 domain:torrent.arjlover.net
 domain:torrent.hificode.in
+domain:torrent.i.ng
 domain:torrent.mp3quran.net
 domain:torrent.nwps.ws
 domain:torrent.resonatingmedia.com
