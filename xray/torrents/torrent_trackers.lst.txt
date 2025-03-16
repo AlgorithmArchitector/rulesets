@@ -676,6 +676,7 @@ domain:tracker.funfile.org
 domain:tracker.gbitt.info
 domain:tracker.gcrenwp.top
 domain:tracker.gcrreen.xyz
+domain:tracker.ghostchu-services.top
 domain:tracker.gigantino.net
 domain:tracker.gigatorrents.ws
 domain:tracker.gmi.gd
@@ -919,6 +920,7 @@ domain:unknownsite.de
 domain:uploads.gamecoast.net
 domain:uraniumhexafluori.de
 domain:us-tracker.publictracker.xyz
+domain:utracker.ghostchu-services.top
 domain:v1046920.hosted-by-vdsina.ru
 domain:v2.iperson.xyz
 domain:v6-tracker.0g.cx
