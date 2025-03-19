@@ -207,6 +207,7 @@ domain:explodie.org
 domain:f1sh.de
 domain:fe.dealclub.de
 domain:fh2.cmp-gaming.com
+domain:files.project-cataclysm.ru
 domain:filetracker.xyz
 domain:finbytes.org
 domain:fireworks.eu.org
@@ -682,6 +683,7 @@ domain:tracker.gigatorrents.ws
 domain:tracker.gmi.gd
 domain:tracker.grepler.com
 domain:tracker.guguan.000.pe
+domain:tracker.guguan.dpdns.org
 domain:tracker.guguan.us.kg
 domain:tracker.h0me.cc
 domain:tracker.h3o2.me
