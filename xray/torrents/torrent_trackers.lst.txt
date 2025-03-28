@@ -769,6 +769,7 @@ domain:tracker.open-data.network
 domain:tracker.open-internet.nl
 domain:tracker.openbittorrent.com
 domain:tracker.openbtba.com
+domain:tracker.opendev.cloud
 domain:tracker.opentracker.se
 domain:tracker.opentrackr.org
 domain:tracker.parrotlinux.org
