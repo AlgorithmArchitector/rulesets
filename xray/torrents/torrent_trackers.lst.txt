@@ -575,6 +575,7 @@ domain:trackarr.org
 domain:tracker-cn.zhuqiy.eu.org
 domain:tracker-udp.gbitt.info
 domain:tracker-us.silksa.co.za
+domain:tracker-v6.opendev.cloud
 domain:tracker-v6.zooki.xyz
 domain:tracker-zhuqiy.dgj055.icu
 domain:tracker.0o.is
