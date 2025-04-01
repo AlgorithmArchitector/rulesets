@@ -419,6 +419,7 @@ domain:xhamsterlive.com
 domain:xnxx.com
 domain:xvideos.com
 domain:yeggi.com
+domain:youtu.be
 domain:zetflix.online
 domain:znanija.com
 domain:zohomail.com
