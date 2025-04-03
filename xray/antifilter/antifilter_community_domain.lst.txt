@@ -11,6 +11,7 @@ domain:account-api.protonmail.com
 domain:account.jetbrains.com
 domain:account.protonmail.com
 domain:accounts.spotify.com
+domain:accounts.supercell.com
 domain:adguard.com
 domain:afcs.dellcdn.com
 domain:aftermarket.schaeffler.com
@@ -221,7 +222,6 @@ domain:my.atlassian.com
 domain:myworld-portal.leica-geosystems.com
 domain:nasvsehtoshnit.ru
 domain:navalny.com
-domain:netapp.com
 domain:netflix.com
 domain:news.google.com
 domain:newstudio.tv
@@ -323,6 +323,7 @@ domain:static.cdninstagram.com
 domain:static.files.bbci.co.uk
 domain:static.rutracker.cc
 domain:status.discordapp.com
+domain:store.supercell.com
 domain:strava.com
 domain:stulchik.net
 domain:support.cambiumnetworks.com
