@@ -222,6 +222,7 @@ domain:my.atlassian.com
 domain:myworld-portal.leica-geosystems.com
 domain:nasvsehtoshnit.ru
 domain:navalny.com
+domain:netapp.com
 domain:netflix.com
 domain:news.google.com
 domain:newstudio.tv
@@ -233,6 +234,7 @@ domain:notepad-plus-plus.org
 domain:novayagazeta.eu
 domain:novayagazeta.ru
 domain:ntc.party
+domain:nxp.com
 domain:nyaa.si
 domain:nyaa.tracker.wf
 domain:oaistatic.com
