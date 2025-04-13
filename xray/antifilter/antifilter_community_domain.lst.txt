@@ -87,6 +87,7 @@ domain:crunchyroll.com
 domain:cub.red
 domain:czx.to
 domain:d.docs.live.net
+domain:data-cdn.mbamupdates.com
 domain:database.clamav.net
 domain:deezer.com
 domain:dell.com
