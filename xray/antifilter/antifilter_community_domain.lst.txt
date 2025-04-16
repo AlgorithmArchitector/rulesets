@@ -318,6 +318,7 @@ domain:snapmagic.com
 domain:soapui.org
 domain:sobesednik.ru
 domain:software.cisco.com
+domain:sora.com
 domain:soundcloud.com
 domain:spotify.com
 domain:st.kinovod.net
