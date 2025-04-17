@@ -108,6 +108,7 @@ domain:docs.redis.com
 domain:documentation.meraki.com
 domain:download.jetbrains.com
 domain:download.lenovo.com
+domain:download.qt.io
 domain:download.screamingfrog.co.uk
 domain:download.wetransfer.com
 domain:doxajournal.ru
