@@ -82,6 +82,7 @@ domain:cloud.mongodb.com
 domain:cloudflare-dns.com
 domain:colta.ru
 domain:community.cisco.com
+domain:coomer.su
 domain:copilot-proxy.githubusercontent.com
 domain:crunchyroll.com
 domain:cub.red
