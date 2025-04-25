@@ -159,6 +159,7 @@ domain:grok.com
 domain:gulagu.net
 domain:habr.com
 domain:hd.zetfix.online
+domain:hdkinoteatr.com
 domain:helm.releases.hashicorp.com
 domain:holod.global.ssl.fastly.net
 domain:holod.media
