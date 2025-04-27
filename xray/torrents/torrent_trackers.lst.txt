@@ -650,6 +650,7 @@ domain:tracker.dmhy.pw
 domain:tracker.dnlab.net
 domain:tracker.draatman.uk
 domain:tracker.ds.is
+domain:tracker.ducks.party
 domain:tracker.dump.cl
 domain:tracker.dutchtracking.nl
 domain:tracker.dyne.org
@@ -833,6 +834,7 @@ domain:tracker.torrentuje.me
 domain:tracker.torrenty.org
 domain:tracker.torrentyorg.pl
 domain:tracker.torrust-demo.com
+domain:tracker.trackarr.org
 domain:tracker.trackerfix.com
 domain:tracker.trackton.ga
 domain:tracker.tricitytorrents.com
