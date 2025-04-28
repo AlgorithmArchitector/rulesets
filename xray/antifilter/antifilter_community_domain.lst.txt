@@ -304,6 +304,7 @@ domain:rutor.org
 domain:rutracker.org
 domain:rutracker.ru
 domain:s3-1.amazonaws.com
+domain:saveeditonline.com
 domain:saverudata.info
 domain:scontent.cdninstagram.com
 domain:searchfloor.org
