@@ -165,6 +165,7 @@ domain:holod.global.ssl.fastly.net
 domain:holod.media
 domain:honeywell.com
 domain:hyperhost.ua
+domain:i.4pda.ws
 domain:ichef.bbci.co.uk
 domain:id.cisco.com
 domain:iichan.hk
