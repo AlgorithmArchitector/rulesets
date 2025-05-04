@@ -17,6 +17,7 @@ domain:aaa.army
 domain:academic-p2p.appspot.com
 domain:acg.rip
 domain:adm.category5.tv
+domain:admin.52ywp.com
 domain:admin.videoenpoche.info
 domain:adminion.n-blade.ru
 domain:all4nothin.net
@@ -112,6 +113,7 @@ domain:ipv4announce.sktorrent.eu
 domain:ipv6.rer.lol
 domain:ipv6.tracker.harry.lu
 domain:ipv6.tracker.zerobytes.xyz
+domain:isk.richardsw.club
 domain:ismaarino.com
 domain:jsb.by
 domain:kanal-4.de
@@ -290,6 +292,7 @@ domain:tracker.dler.org
 domain:tracker.dmcomic.org
 domain:tracker.ds.is
 domain:tracker.ducks.party
+domain:tracker.dump.cl
 domain:tracker.dutchtracking.nl
 domain:tracker.dyne.org
 domain:tracker.e-utp.net
@@ -335,6 +338,7 @@ domain:tracker.leechshield.link
 domain:tracker.lelux.fi
 domain:tracker.lilithraws.org
 domain:tracker.lintk.me
+domain:tracker.linvk.com
 domain:tracker.minglong.org
 domain:tracker.mininova.org
 domain:tracker.moeblog.cn
@@ -377,6 +381,7 @@ domain:tracker.tamersunion.org
 domain:tracker.tasvideos.org
 domain:tracker.teambelgium.net
 domain:tracker.theempire.bz
+domain:tracker.theoks.net
 domain:tracker.therarbg.to
 domain:tracker.tiny-vps.com
 domain:tracker.tntvillage.scambioetico.org
@@ -392,6 +397,7 @@ domain:tracker.trackarr.org
 domain:tracker.trackerfix.com
 domain:tracker.trackton.ga
 domain:tracker.tricitytorrents.com
+domain:tracker.tritan.gg
 domain:tracker.tryhackx.org
 domain:tracker.tvunderground.org.ru
 domain:tracker.uw0.xyz
@@ -414,6 +420,7 @@ domain:tracker0.ufibox.com
 domain:tracker01.loveapp.com
 domain:tracker1.520.jp
 domain:tracker1.itzmx.com
+domain:tracker1.myporn.club
 domain:tracker2.christianbro.pw
 domain:tracker2.dler.org
 domain:tracker2.indowebster.com
@@ -433,6 +440,7 @@ domain:uatracker.net
 domain:udp.tracker.projectk.org
 domain:ultra.zt.ua
 domain:us-tracker.publictracker.xyz
+domain:utracker.ghostchu-services.top
 domain:valakas.rollo.dnsabr.com
 domain:vibe.community
 domain:vpn.flying-datacenter.de
