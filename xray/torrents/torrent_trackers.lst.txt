@@ -151,6 +151,7 @@ domain:open.acgtracker.com
 domain:open.demonii.com
 domain:open.demonii.si
 domain:open.dstud.io
+domain:open.free-tracker.ga
 domain:open.kickasstracker.com
 domain:open.lolicon.eu
 domain:open.nyaatorrents.info

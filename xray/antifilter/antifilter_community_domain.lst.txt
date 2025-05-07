@@ -122,6 +122,7 @@ domain:ehorussia.com
 domain:ej.ru
 domain:envato.com
 domain:etsy.com
+domain:eu-iot-prod.aws.tcljd.com
 domain:euronews.com
 domain:event.on24.com
 domain:exler.ru
