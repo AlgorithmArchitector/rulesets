@@ -267,6 +267,7 @@ domain:pcbway.com
 domain:pcbway.ru
 domain:php.su
 domain:piccy.info
+domain:pixabay.com
 domain:pixiv.net
 domain:plab.site
 domain:platform.twitter.com
