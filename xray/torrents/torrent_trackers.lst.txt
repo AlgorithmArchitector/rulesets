@@ -91,6 +91,7 @@ domain:engplus.ru
 domain:evan.im
 domain:exodus.desync.com
 domain:explodie.org
+domain:extracker.dahrkael.net
 domain:fe.dealclub.de
 domain:finbytes.org
 domain:forever-tracker.zooki.xyz
