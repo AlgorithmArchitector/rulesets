@@ -292,6 +292,7 @@ domain:releases.hashicorp.com
 domain:repo.mongodb.org
 domain:republic.ru
 domain:resp.app
+domain:ridl.io
 domain:rpm.grafana.com
 domain:ru.bellingcat.com
 domain:ru.depositphotos.com
