@@ -227,6 +227,7 @@ domain:thetracker.org
 domain:thetradersden.org
 domain:thevault.bz
 domain:thouvenin.cloud
+domain:threads.canofsocks.com
 domain:tk.greedland.net
 domain:tk.mabo.ltd
 domain:torrent-team.net
