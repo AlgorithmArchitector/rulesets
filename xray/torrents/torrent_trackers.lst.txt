@@ -274,6 +274,7 @@ domain:tracker.army
 domain:tracker.baltracker.net
 domain:tracker.beeimg.com
 domain:tracker.birkenwald.de
+domain:tracker.bitcoinindia.space
 domain:tracker.bittor.pw
 domain:tracker.bittorrent.am
 domain:tracker.bjut.jp
@@ -367,6 +368,7 @@ domain:tracker.parrotlinux.org
 domain:tracker.parrotsec.org
 domain:tracker.pirateparty.gr
 domain:tracker.piratepublic.com
+domain:tracker.pmman.tech
 domain:tracker.pomf.se
 domain:tracker.privateseedbox.xyz
 domain:tracker.publicbt.com
