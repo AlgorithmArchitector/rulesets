@@ -324,6 +324,7 @@ domain:tracker.gmi.gd
 domain:tracker.grepler.com
 domain:tracker.halfchub.club
 domain:tracker.hama3.net
+domain:tracker.hifitechindia.com
 domain:tracker.iamhansen.xyz
 domain:tracker.idocdn.com
 domain:tracker.imgoingto.icu
