@@ -370,6 +370,7 @@ domain:tracker.parrotlinux.org
 domain:tracker.parrotsec.org
 domain:tracker.pirateparty.gr
 domain:tracker.piratepublic.com
+domain:tracker.plx.im
 domain:tracker.pmman.tech
 domain:tracker.pomf.se
 domain:tracker.privateseedbox.xyz
