@@ -380,6 +380,7 @@ domain:tracker.publictracker.xyz
 domain:tracker.pussytorrents.org
 domain:tracker.qu.ax
 domain:tracker.renfei.net
+domain:tracker.rescuecrew7.com
 domain:tracker.sbsub.com
 domain:tracker.shkinev.me
 domain:tracker.skynetcloud.site
