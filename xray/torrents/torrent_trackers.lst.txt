@@ -71,6 +71,7 @@ domain:cdn-2.gamecoast.org
 domain:chanchan.uchuu.co.uk
 domain:chihaya.de
 domain:chihaya.toss.li
+domain:cn.pcfreetime.com
 domain:code2chicken.nl
 domain:concen.org
 domain:cutiegirl.ru
