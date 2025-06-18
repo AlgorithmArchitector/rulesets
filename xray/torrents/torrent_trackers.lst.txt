@@ -3,6 +3,7 @@ domain:0205.uptm.ch
 domain:0d.kebhana.mx
 domain:1.tracker.eu.org
 domain:1337.abcvg.info
+domain:1c.premierzal.ru
 domain:2.tracker.eu.org
 domain:3.tracker.eu.org
 domain:3rt.tace.ru
@@ -384,6 +385,7 @@ domain:tracker.renfei.net
 domain:tracker.rescuecrew7.com
 domain:tracker.sbsub.com
 domain:tracker.shkinev.me
+domain:tracker.skillindia.site
 domain:tracker.skynetcloud.site
 domain:tracker.skyts.net
 domain:tracker.sloppyta.co
@@ -455,6 +457,7 @@ domain:udp.tracker.projectk.org
 domain:ultra.zt.ua
 domain:us-tracker.publictracker.xyz
 domain:utracker.ghostchu-services.top
+domain:v74853.hosted-by-vdsina.com
 domain:valakas.rollo.dnsabr.com
 domain:vibe.community
 domain:vpn.flying-datacenter.de

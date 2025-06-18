@@ -91,6 +91,7 @@ domain:czx.to
 domain:d.docs.live.net
 domain:data-cdn.mbamupdates.com
 domain:database.clamav.net
+domain:deepl.com
 domain:deezer.com
 domain:dell.com
 domain:deviantart.com
