@@ -257,6 +257,7 @@ domain:tr.zukizuki.org
 domain:tr2.ysagin.top
 domain:tr3.ysagin.top
 domain:tr4ck3r.duckdns.org
+domain:track3r.site
 domain:trackarr.org
 domain:tracker-udp.gbitt.info
 domain:tracker-v6.zooki.xyz
