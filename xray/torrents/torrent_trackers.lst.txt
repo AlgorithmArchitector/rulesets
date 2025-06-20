@@ -246,6 +246,8 @@ domain:torrentsmd.com
 domain:torrenttracker.nwc.acsalaska.net
 domain:torrentzilla.org
 domain:tp.m-team.cc
+domain:tr-rh-zhuqiy.dgj055.icu
+domain:tr-zhuqiy-1.dgj055.icu
 domain:tr.abiir.top
 domain:tr.abir.ga
 domain:tr.bangumi.moe
@@ -449,6 +451,7 @@ domain:tracker6.lelux.fi
 domain:tracker810.xyz
 domain:trakx.herokuapp.com
 domain:tribalmixes.com
+domain:trl-zhuqiy.dgj055.icu
 domain:trun.tom.ru
 domain:tsundere.pw
 domain:ttk2.nbaonlineservice.com
