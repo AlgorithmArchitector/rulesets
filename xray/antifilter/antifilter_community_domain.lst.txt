@@ -148,6 +148,7 @@ domain:gallery.zetalliance.org
 domain:game.brawlstarsgame.com
 domain:gateway.discord.gg
 domain:geekyfuroshiki.com
+domain:gemini.google.com
 domain:geni.us
 domain:genius.com
 domain:gitlab.io
