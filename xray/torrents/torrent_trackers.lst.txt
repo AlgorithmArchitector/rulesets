@@ -329,6 +329,7 @@ domain:tracker.gigantino.net
 domain:tracker.gigatorrents.ws
 domain:tracker.gmi.gd
 domain:tracker.grepler.com
+domain:tracker.guguan.dpdns.org
 domain:tracker.halfchub.club
 domain:tracker.hama3.net
 domain:tracker.hifimarket.in
