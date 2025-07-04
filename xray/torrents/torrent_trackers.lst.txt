@@ -430,6 +430,7 @@ domain:tracker.vectahosting.eu
 domain:tracker.vulnix.sh
 domain:tracker.waaa.moe
 domain:tracker.xiaoduola.xyz
+domain:tracker.xn--djrq4gl4hvoi.top
 domain:tracker.yemekyedim.com
 domain:tracker.ygsub.com
 domain:tracker.yoshi210.com
