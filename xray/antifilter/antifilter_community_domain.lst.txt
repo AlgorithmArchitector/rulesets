@@ -22,6 +22,7 @@ domain:alberta.ca
 domain:amnezia.org
 domain:anilibria.tv
 domain:animestars.org
+domain:ansys.com
 domain:antizapret.prostovpn.org
 domain:api.app.prod.grazie.aws.intellij.net
 domain:api.github.com
