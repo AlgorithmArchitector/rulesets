@@ -125,6 +125,7 @@ domain:edgeservices.bing.com
 domain:ehorussia.com
 domain:ej.ru
 domain:envato.com
+domain:epg.one
 domain:etsy.com
 domain:eu-iot-prod.aws.tcljd.com
 domain:euronews.com
