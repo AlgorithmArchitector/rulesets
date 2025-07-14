@@ -379,6 +379,7 @@ domain:tracker.opentracker.se
 domain:tracker.opentrackr.org
 domain:tracker.parrotlinux.org
 domain:tracker.parrotsec.org
+domain:tracker.pcfreetime.com
 domain:tracker.pirateparty.gr
 domain:tracker.piratepublic.com
 domain:tracker.plx.im
@@ -463,6 +464,7 @@ domain:trl-zhuqiy.dgj055.icu
 domain:trun.tom.ru
 domain:tsundere.pw
 domain:ttk2.nbaonlineservice.com
+domain:ttracker.just-h.party
 domain:u.wwwww.wtf
 domain:uatracker.net
 domain:udp.tracker.projectk.org
