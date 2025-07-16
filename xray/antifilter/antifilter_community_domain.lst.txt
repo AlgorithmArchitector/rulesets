@@ -192,6 +192,7 @@ domain:jut.su
 domain:kasparov.ru
 domain:kavkaz-uzel.eu
 domain:kemono.party
+domain:kemono.su
 domain:kino.pub
 domain:kinobase.org
 domain:kinogo.ec
