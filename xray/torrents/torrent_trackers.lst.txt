@@ -182,6 +182,7 @@ domain:public.publictracker.xyz
 domain:public.tracker.vraphim.com
 domain:publictracker.ch
 domain:publictracker.xyz
+domain:pybittrack.retiolus.net
 domain:qg.lorzl.gq
 domain:region.nl1.privex.cc
 domain:retracker.akado-ural.ru
