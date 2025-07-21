@@ -243,6 +243,7 @@ domain:torrent.mp3quran.net
 domain:torrent.nwps.ws
 domain:torrent.resonatingmedia.com
 domain:torrent.tdjs.tech
+domain:torrent.tracker.durukanbal.com
 domain:torrentclub.tech
 domain:torrents-nn.cn
 domain:torrentsmd.com
