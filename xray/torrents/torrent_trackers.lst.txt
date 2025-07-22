@@ -162,6 +162,7 @@ domain:open.nyaatorrents.info
 domain:open.nyap2p.com
 domain:open.stealth.si
 domain:open.touki.ru
+domain:open.tracker.cl
 domain:open.trackerlist.xyz
 domain:opentor.org
 domain:opentracker.acgnx.com
