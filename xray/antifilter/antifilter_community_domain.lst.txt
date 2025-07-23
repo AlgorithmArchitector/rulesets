@@ -210,6 +210,7 @@ domain:linuxiac.com
 domain:localbitcoins.com
 domain:login.amd.com
 domain:lostfilm.run
+domain:lostfilm.today
 domain:lostfilm.tv
 domain:lostfilm.win
 domain:m.strava.com
