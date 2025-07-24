@@ -227,6 +227,7 @@ domain:mediazona.online
 domain:medium.com
 domain:meduza.io
 domain:megapeer.ru
+domain:melord.net
 domain:memohrc.org
 domain:metacritic.com
 domain:meteo.paraplan.net

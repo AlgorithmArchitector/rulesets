@@ -27,6 +27,7 @@ domain:api.bitumconference.ru
 domain:aruacfilmes.com.br
 domain:asger.xyz
 domain:asiatorrent.ddns.net
+domain:asiatorrent.giize.com
 domain:atrack.pow7.com
 domain:baibako.tv
 domain:bandito.byterunner.io
