@@ -207,6 +207,7 @@ domain:seeders-paradise.org
 domain:servandroidkino.ru
 domain:shadowshq.eddie4.nl
 domain:shadowshq.yi.org
+domain:shahidrazi.online
 domain:share.camoe.cn
 domain:share.hkg-fansub.info
 domain:shnflac.net
