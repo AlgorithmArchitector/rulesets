@@ -104,9 +104,11 @@ domain:fosstorrents.com
 domain:free-tracker.zooki.xyz
 domain:funfile.org
 domain:git.vulnix.sh
+domain:glotorrents.pw
 domain:grifon.info
 domain:h4.trakx.nibba.trade
 domain:hdreactor.org
+domain:hificode.in
 domain:highteahop.top
 domain:home.yxgz.club
 domain:inferno.demonoid.is
@@ -173,6 +175,7 @@ domain:opentracker.io
 domain:opentracker.xyz
 domain:p2p.publictracker.xyz
 domain:p4p.arenabg.com
+domain:passpulse.net
 domain:peerfect.org
 domain:potuk.com
 domain:pow7.com
@@ -342,6 +345,7 @@ domain:tracker.guguan.dpdns.org
 domain:tracker.guguan.us.kg
 domain:tracker.halfchub.club
 domain:tracker.hama3.net
+domain:tracker.healthcareindia.store
 domain:tracker.hifimarket.in
 domain:tracker.hifitechindia.com
 domain:tracker.home.kmzs123.cn
@@ -440,6 +444,7 @@ domain:tracker.vanitycore.co
 domain:tracker.vectahosting.eu
 domain:tracker.vulnix.sh
 domain:tracker.waaa.moe
+domain:tracker.wepzone.net
 domain:tracker.xiaoduola.xyz
 domain:tracker.xn--djrq4gl4hvoi.top
 domain:tracker.yemekyedim.com
@@ -451,6 +456,7 @@ domain:tracker.zerobytes.xyz
 domain:tracker.zhuqiy.dgj055.icu
 domain:tracker.zhuqiy.top
 domain:tracker.zum.bi
+domain:tracker.zupix.online
 domain:tracker0.ufibox.com
 domain:tracker01.loveapp.com
 domain:tracker1.520.jp
