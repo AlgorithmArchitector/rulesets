@@ -251,6 +251,7 @@ domain:nordvpn.com
 domain:notepad-plus-plus.org
 domain:novayagazeta.eu
 domain:novayagazeta.ru
+domain:nsf.gov
 domain:ntc.party
 domain:nxp.com
 domain:nyaa.si
@@ -400,6 +401,7 @@ domain:vipdrive.net
 domain:vot-tak.tv
 domain:vrv.co
 domain:vyos.io
+domain:vyos.net
 domain:watchguard.com
 domain:weather.com
 domain:weblance.com.ua
