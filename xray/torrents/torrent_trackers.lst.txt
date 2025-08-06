@@ -249,6 +249,7 @@ domain:torrenttracker.nwc.acsalaska.net
 domain:torrentzilla.org
 domain:tp.m-team.cc
 domain:tr-rh-zhuqiy.dgj055.icu
+domain:tr-zhuqiy-2.dgj055.icu
 domain:tr.abiir.top
 domain:tr.abir.ga
 domain:tr.bangumi.moe
@@ -281,12 +282,14 @@ domain:tracker.bitcoinindia.space
 domain:tracker.bittor.pw
 domain:tracker.bittorrent.am
 domain:tracker.blacksparrowmedia.net
+domain:tracker.bontal.net
 domain:tracker.breizh.pm
 domain:tracker.bt-hash.com
 domain:tracker.bt4g.com
 domain:tracker.btnext.com
 domain:tracker.btsync.gq
 domain:tracker.bz
+domain:tracker.cangku.moe
 domain:tracker.coppersurfer.tk
 domain:tracker.corpscorp.online
 domain:tracker.cutie.dating
@@ -317,6 +320,7 @@ domain:tracker.frozen-layer.net
 domain:tracker.funfile.org
 domain:tracker.gbitt.info
 domain:tracker.gcrenwp.top
+domain:tracker.ghostchu-services.top
 domain:tracker.gigantino.net
 domain:tracker.gigatorrents.ws
 domain:tracker.gmi.gd
