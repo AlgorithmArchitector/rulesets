@@ -54,6 +54,7 @@ domain:bt.3dmgame.com
 domain:bt.3kb.xyz
 domain:bt.ali213.net
 domain:bt.beatrice-raws.org
+domain:bt.bontal.net
 domain:bt.edwardk.info
 domain:bt.firebit.org
 domain:bt.hliang.com
@@ -249,6 +250,7 @@ domain:torrenttracker.nwc.acsalaska.net
 domain:torrentzilla.org
 domain:tp.m-team.cc
 domain:tr-rh-zhuqiy.dgj055.icu
+domain:tr-zhuqiy-1.dgj055.icu
 domain:tr-zhuqiy-2.dgj055.icu
 domain:tr.abiir.top
 domain:tr.abir.ga
