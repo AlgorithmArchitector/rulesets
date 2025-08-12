@@ -58,7 +58,6 @@ domain:bt.bontal.net
 domain:bt.edwardk.info
 domain:bt.firebit.org
 domain:bt.hliang.com
-domain:bt.ktrackers.com
 domain:bt.okmp3.ru
 domain:bt.poletracker.org
 domain:bt.pusacg.org
@@ -76,7 +75,6 @@ domain:cdn-2.gamecoast.org
 domain:chanchan.uchuu.co.uk
 domain:chihaya.de
 domain:chihaya.toss.li
-domain:cn.pcfreetime.com
 domain:code2chicken.nl
 domain:concen.org
 domain:cutiegirl.ru
@@ -168,7 +166,6 @@ domain:open.touki.ru
 domain:open.tracker.cl
 domain:open.trackerlist.xyz
 domain:opentor.org
-domain:opentracker.8880085.xyz
 domain:opentracker.acgnx.com
 domain:opentracker.acgnx.se
 domain:opentracker.i2p.rocks
@@ -186,7 +183,6 @@ domain:public.publictracker.xyz
 domain:public.tracker.vraphim.com
 domain:publictracker.ch
 domain:publictracker.xyz
-domain:pybittrack.retiolus.net
 domain:qg.lorzl.gq
 domain:retracker.akado-ural.ru
 domain:retracker.baikal-telecom.net
@@ -215,7 +211,6 @@ domain:shnflac.net
 domain:shubt.net
 domain:siambt.com
 domain:sukebei.tracker.wf
-domain:t.213891.xyz
 domain:t.acg.rip
 domain:t.jaekr.sh
 domain:t.nyaatracker.com
@@ -225,7 +220,6 @@ domain:t1.pow7.com
 domain:t2.leech.ie
 domain:t2.pow7.com
 domain:t3.leech.ie
-domain:taciturn-shadow.spb.ru
 domain:tc-boxing.com
 domain:tehconnection.eu
 domain:thegeeks.bz
@@ -250,9 +244,6 @@ domain:torrentsmd.com
 domain:torrenttracker.nwc.acsalaska.net
 domain:torrentzilla.org
 domain:tp.m-team.cc
-domain:tr-rh-zhuqiy.dgj055.icu
-domain:tr-zhuqiy-1.dgj055.icu
-domain:tr-zhuqiy-2.dgj055.icu
 domain:tr.abiir.top
 domain:tr.abir.ga
 domain:tr.bangumi.moe
@@ -285,7 +276,6 @@ domain:tracker.bitcoinindia.space
 domain:tracker.bittor.pw
 domain:tracker.bittorrent.am
 domain:tracker.blacksparrowmedia.net
-domain:tracker.bontal.net
 domain:tracker.breizh.pm
 domain:tracker.bt-hash.com
 domain:tracker.bt4g.com
@@ -298,7 +288,6 @@ domain:tracker.corpscorp.online
 domain:tracker.cutie.dating
 domain:tracker.cyber-hub.net
 domain:tracker.cyberia.is
-domain:tracker.darkness.services
 domain:tracker.dler.com
 domain:tracker.dler.org
 domain:tracker.dmcomic.org
@@ -436,7 +425,6 @@ domain:tracker01.loveapp.com
 domain:tracker1.520.jp
 domain:tracker1.bt.moack.co.kr
 domain:tracker1.itzmx.com
-domain:tracker1.myporn.club
 domain:tracker2.christianbro.pw
 domain:tracker2.dler.org
 domain:tracker2.indowebster.com
@@ -448,7 +436,6 @@ domain:tracker6.lelux.fi
 domain:tracker810.xyz
 domain:trakx.herokuapp.com
 domain:tribalmixes.com
-domain:trl-zhuqiy.dgj055.icu
 domain:trun.tom.ru
 domain:tsundere.pw
 domain:ttk2.nbaonlineservice.com
