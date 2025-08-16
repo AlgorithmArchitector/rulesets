@@ -7,6 +7,7 @@ domain:1c.premierzal.ru
 domain:2.tracker.eu.org
 domain:3.tracker.eu.org
 domain:3rt.tace.ru
+domain:4.tracker.eu.org
 domain:47.ip-51-68-199.eu
 domain:5rt.tace.ru
 domain:61626c.net
@@ -211,6 +212,7 @@ domain:share.hkg-fansub.info
 domain:shnflac.net
 domain:shubt.net
 domain:siambt.com
+domain:speedtest.iperson.xyz
 domain:sukebei.tracker.wf
 domain:t.acg.rip
 domain:t.jaekr.sh
@@ -285,6 +287,7 @@ domain:tracker.btnext.com
 domain:tracker.btsync.gq
 domain:tracker.bz
 domain:tracker.cangku.moe
+domain:tracker.cloudbase.store
 domain:tracker.coppersurfer.tk
 domain:tracker.corpscorp.online
 domain:tracker.cutie.dating
@@ -381,6 +384,7 @@ domain:tracker.skynetcloud.site
 domain:tracker.skyts.net
 domain:tracker.sloppyta.co
 domain:tracker.srv00.com
+domain:tracker.startwork.cv
 domain:tracker.swateam.org.uk
 domain:tracker.tambovnet.org
 domain:tracker.tamersunion.org
