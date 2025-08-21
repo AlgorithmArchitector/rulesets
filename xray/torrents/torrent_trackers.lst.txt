@@ -262,6 +262,7 @@ domain:tr3.ysagin.top
 domain:tr4ck3r.duckdns.org
 domain:tracker-udp.gbitt.info
 domain:tracker-v6.zooki.xyz
+domain:tracker-zhuqiy.dgj055.icu
 domain:tracker.0o.is
 domain:tracker.0x.tf
 domain:tracker.23794.top
@@ -453,6 +454,7 @@ domain:uatracker.net
 domain:udp.tracker.projectk.org
 domain:ultra.zt.ua
 domain:us-tracker.publictracker.xyz
+domain:utracker.ghostchu-services.top
 domain:v74853.hosted-by-vdsina.com
 domain:valakas.rollo.dnsabr.com
 domain:vibe.community
