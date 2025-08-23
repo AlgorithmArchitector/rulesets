@@ -249,6 +249,7 @@ domain:torrenttracker.nwc.acsalaska.net
 domain:torrentzilla.org
 domain:tp.m-team.cc
 domain:tr-rh-zhuqiy.dgj055.icu
+domain:tr-zhuqiy-1.dgj055.icu
 domain:tr.abiir.top
 domain:tr.abir.ga
 domain:tr.bangumi.moe
@@ -269,6 +270,7 @@ domain:tracker.23794.top
 domain:tracker.36dm.com
 domain:tracker.aburaya.live
 domain:tracker.acgnx.se
+domain:tracker.alaskantf.com
 domain:tracker.aletorrenty.pl
 domain:tracker.ali213.net
 domain:tracker.altrosky.nl
@@ -330,6 +332,7 @@ domain:tracker.hama3.net
 domain:tracker.healthcareindia.store
 domain:tracker.hifimarket.in
 domain:tracker.hifitechindia.com
+domain:tracker.home.kmzs123.cn
 domain:tracker.iamhansen.xyz
 domain:tracker.idocdn.com
 domain:tracker.imgoingto.icu
