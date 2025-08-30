@@ -26,6 +26,7 @@ domain:adminion.n-blade.ru
 domain:all4nothin.net
 domain:anidex.moe
 domain:api.bitumconference.ru
+domain:api.ipv4online.uk
 domain:aruacfilmes.com.br
 domain:asger.xyz
 domain:asiatorrent.ddns.net
@@ -137,6 +138,7 @@ domain:mail.realliferpg.de
 domain:mail2.zelenaya.net
 domain:martin-gebhardt.eu
 domain:masters-tb.com
+domain:mathkangaroo.jp
 domain:mediaclub.tv
 domain:megatorrents.kg
 domain:metal.iplay.ro
