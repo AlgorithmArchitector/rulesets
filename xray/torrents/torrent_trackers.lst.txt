@@ -264,6 +264,7 @@ domain:tr.zukizuki.org
 domain:tr2.ysagin.top
 domain:tr3.ysagin.top
 domain:tr4ck3r.duckdns.org
+domain:tracker-de-2.cutie.dating
 domain:tracker-udp.gbitt.info
 domain:tracker-v6.zooki.xyz
 domain:tracker-zhuqiy.dgj055.icu
@@ -301,6 +302,7 @@ domain:tracker.cutie.dating
 domain:tracker.cyber-hub.net
 domain:tracker.cyberia.is
 domain:tracker.darkness.services
+domain:tracker.dhitechnical.com
 domain:tracker.dler.com
 domain:tracker.dler.org
 domain:tracker.dmcomic.org
