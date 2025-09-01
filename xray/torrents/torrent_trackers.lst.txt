@@ -375,6 +375,7 @@ domain:tracker.opentracker.se
 domain:tracker.opentrackr.org
 domain:tracker.parrotlinux.org
 domain:tracker.parrotsec.org
+domain:tracker.pcfreetime.com
 domain:tracker.pirateparty.gr
 domain:tracker.piratepublic.com
 domain:tracker.plx.im
