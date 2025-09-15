@@ -439,6 +439,7 @@ domain:tracker.yoshi210.com
 domain:tracker.yume-hatsuyuki.moe
 domain:tracker.zemoj.com
 domain:tracker.zerobytes.xyz
+domain:tracker.zhuqiy.com
 domain:tracker.zhuqiy.dgj055.icu
 domain:tracker.zhuqiy.top
 domain:tracker.zum.bi
