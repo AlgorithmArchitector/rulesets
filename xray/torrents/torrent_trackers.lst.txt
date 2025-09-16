@@ -205,6 +205,7 @@ domain:retracker.sevstar.net
 domain:retracker.spark-rostov.ru
 domain:retracker01-msk-virt.corbina.net
 domain:rt.tace.ru
+domain:run.publictracker.xyz
 domain:rutorrent.frontline-mod.com
 domain:sd-161673.dedibox.fr
 domain:secure.pow7.com

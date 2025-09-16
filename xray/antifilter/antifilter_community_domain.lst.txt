@@ -267,6 +267,7 @@ domain:orbit-games.com
 domain:os.mbed.com
 domain:ovdinfo.org
 domain:packages.gitlab.com
+domain:pages.dev
 domain:pandasecurity.com
 domain:paperpaper.ru
 domain:path3.xtracloud.net
