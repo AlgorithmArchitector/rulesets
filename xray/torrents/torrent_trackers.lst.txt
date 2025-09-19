@@ -26,6 +26,7 @@ domain:admin.videoenpoche.info
 domain:adminion.n-blade.ru
 domain:all4nothin.net
 domain:anidex.moe
+domain:anna.bt.bontal.net
 domain:api.bitumconference.ru
 domain:api.ipv4online.uk
 domain:aruacfilmes.com.br
@@ -491,6 +492,7 @@ domain:www.torrentsnipe.info
 domain:www.wareztorrent.com
 domain:xwt-classics.net
 domain:xxxtor.com
+domain:yuki.bt.bontal.net
 domain:yuwabits.net
 domain:z.mercax.com
 domain:zephir.monocul.us
