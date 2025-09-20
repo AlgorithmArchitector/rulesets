@@ -426,6 +426,7 @@ domain:tracker.tricitytorrents.com
 domain:tracker.tritan.gg
 domain:tracker.tryhackx.org
 domain:tracker.tvunderground.org.ru
+domain:tracker.uraniumhexafluori.de
 domain:tracker.uw0.xyz
 domain:tracker.v6speed.org
 domain:tracker.valete.tf
