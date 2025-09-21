@@ -76,6 +76,7 @@ domain:camera.lei001.com
 domain:carbon-bonsai-621.appspot.com
 domain:cdn-1.gamecoast.org
 domain:cdn-2.gamecoast.org
+domain:ch3oh.ru
 domain:chanchan.uchuu.co.uk
 domain:chihaya.de
 domain:chihaya.toss.li
@@ -288,6 +289,7 @@ domain:tracker.anonwebz.xyz
 domain:tracker.army
 domain:tracker.baltracker.net
 domain:tracker.beeimg.com
+domain:tracker.belmult.online
 domain:tracker.birkenwald.de
 domain:tracker.bitcoinindia.space
 domain:tracker.bittor.pw

@@ -288,6 +288,7 @@ domain:plab.site
 domain:platform.twitter.com
 domain:plugins.jetbrains.com
 domain:polit.ru
+domain:pornhub.com
 domain:pornolab.net
 domain:portal.bgpmon.net
 domain:proekt.media
