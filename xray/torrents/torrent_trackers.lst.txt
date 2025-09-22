@@ -72,6 +72,7 @@ domain:bt2.54new.com
 domain:bt2.edwardk.info
 domain:bubu.mapfactor.com
 domain:buny.uk
+domain:burmese.app
 domain:camera.lei001.com
 domain:carbon-bonsai-621.appspot.com
 domain:cdn-1.gamecoast.org

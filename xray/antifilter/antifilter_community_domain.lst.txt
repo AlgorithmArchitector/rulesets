@@ -19,6 +19,7 @@ domain:aftermarket.zf.com
 domain:agents.media
 domain:agentura.ru
 domain:alberta.ca
+domain:alphacoders.com
 domain:amnezia.org
 domain:anilibria.tv
 domain:animestars.org
@@ -404,6 +405,7 @@ domain:vot-tak.tv
 domain:vrv.co
 domain:vyos.io
 domain:vyos.net
+domain:wall.alphacoders.com
 domain:watchguard.com
 domain:weather.com
 domain:weblance.com.ua
