@@ -161,10 +161,12 @@ domain:ns349743.ip-91-121-106.eu
 domain:ns389251.ovh.net
 domain:nyaa.tracker.wf
 domain:omg.wtftrackr.xyz
+domain:open-tracker.demonoid.ch
 domain:open.acgnxtracker.com
 domain:open.acgtracker.com
 domain:open.demonii.com
 domain:open.demonii.si
+domain:open.demonoid.ch
 domain:open.dstud.io
 domain:open.free-tracker.ga
 domain:open.kickasstracker.com
@@ -189,6 +191,7 @@ domain:pow7.com
 domain:prestige.minimafia.nl
 domain:proaudiotorrents.org
 domain:public-tracker.zooki.xyz
+domain:public.demonoid.ch
 domain:public.popcorn-tracker.org
 domain:public.publictracker.xyz
 domain:public.tracker.vraphim.com
