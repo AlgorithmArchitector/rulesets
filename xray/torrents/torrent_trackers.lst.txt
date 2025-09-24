@@ -73,6 +73,7 @@ domain:bt2.edwardk.info
 domain:bubu.mapfactor.com
 domain:buny.uk
 domain:burmese.app
+domain:bvarf.tracker.sh
 domain:camera.lei001.com
 domain:carbon-bonsai-621.appspot.com
 domain:cdn-1.gamecoast.org
@@ -162,6 +163,7 @@ domain:ns389251.ovh.net
 domain:nyaa.tracker.wf
 domain:omg.wtftrackr.xyz
 domain:open-tracker.demonoid.ch
+domain:open-v6.demonoid.ch
 domain:open.acgnxtracker.com
 domain:open.acgtracker.com
 domain:open.demonii.com
