@@ -231,6 +231,7 @@ domain:speedtest.iperson.xyz
 domain:sukebei.tracker.wf
 domain:t.213891.xyz
 domain:t.acg.rip
+domain:t.al.uy
 domain:t.jaekr.sh
 domain:t.nyaatracker.com
 domain:t.overflow.biz
