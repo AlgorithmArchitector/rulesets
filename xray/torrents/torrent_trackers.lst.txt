@@ -271,6 +271,7 @@ domain:tr.abiir.top
 domain:tr.abir.ga
 domain:tr.bangumi.moe
 domain:tr.cili001.com
+domain:tr.highstar.shop
 domain:tr.kxmp.cf
 domain:tr.nyacat.pw
 domain:tr.ready4.icu
