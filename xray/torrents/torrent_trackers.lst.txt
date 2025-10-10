@@ -96,6 +96,7 @@ domain:deviloid.net
 domain:discord.heihachi.pw
 domain:dpiui.reedlan.com
 domain:drumkitx.com
+domain:echostar.ddnsfree.com
 domain:eddie4.nl
 domain:edu.uifr.ru
 domain:elitezones.ro
@@ -351,6 +352,7 @@ domain:tracker.gigantino.net
 domain:tracker.gigatorrents.ws
 domain:tracker.gmi.gd
 domain:tracker.grepler.com
+domain:tracker.guguan.us.kg
 domain:tracker.halfchub.club
 domain:tracker.hama3.net
 domain:tracker.healthcareindia.store
