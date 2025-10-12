@@ -202,6 +202,7 @@ domain:publictracker.ch
 domain:publictracker.xyz
 domain:qg.lorzl.gq
 domain:region.nl1.privex.cc
+domain:rekcart.duckdns.org
 domain:retracker.akado-ural.ru
 domain:retracker.baikal-telecom.net
 domain:retracker.hotplug.ru
@@ -352,6 +353,7 @@ domain:tracker.gigantino.net
 domain:tracker.gigatorrents.ws
 domain:tracker.gmi.gd
 domain:tracker.grepler.com
+domain:tracker.guguan.000.pe
 domain:tracker.guguan.us.kg
 domain:tracker.halfchub.club
 domain:tracker.hama3.net
