@@ -316,6 +316,7 @@ domain:tracker.btnext.com
 domain:tracker.btsync.gq
 domain:tracker.bz
 domain:tracker.cangku.moe
+domain:tracker.chaoz.li
 domain:tracker.cloudbase.store
 domain:tracker.coppersurfer.tk
 domain:tracker.corpscorp.online
