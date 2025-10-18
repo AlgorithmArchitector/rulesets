@@ -503,6 +503,7 @@ domain:vps02.net.orel.ru
 domain:w.wwwww.wtf
 domain:wareztorrent.com
 domain:wassermann.online
+domain:wegkxfcivgx.ydns.eu
 domain:wepzone.net
 domain:worldboxingvideoarchive.com
 domain:www.all4nothin.net
