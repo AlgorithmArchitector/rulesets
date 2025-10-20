@@ -72,6 +72,7 @@ domain:builds.parsec.app
 domain:canva.com
 domain:cdn.id.supercell.com
 domain:cdn.oaistatic.com
+domain:cdn2site.com
 domain:cdninstagram.com
 domain:certifytheweb.com
 domain:chat.openai.com
