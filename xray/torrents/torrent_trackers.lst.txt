@@ -83,6 +83,7 @@ domain:chanchan.uchuu.co.uk
 domain:chihaya.de
 domain:chihaya.toss.li
 domain:cn.pcfreetime.com
+domain:cny.fan
 domain:code2chicken.nl
 domain:concen.org
 domain:cutiegirl.ru
