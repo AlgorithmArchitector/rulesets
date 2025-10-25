@@ -41,9 +41,6 @@ jobs:
           echo "Current Directory: $PWD"
           mkdir -p singbox-inputs
 
-          # <--- ИЗМЕНЕНИЕ №1: Мы больше не создаем adaway.json, так как будем обрабатывать этот список по-другому.
-          # cat << EOF > singbox-inputs/adaway.json ... был удален отсюда.
-
           cat << EOF > singbox-inputs/torrents.json
           [
             {
@@ -78,7 +75,7 @@ jobs:
           ]
           EOF
 
-      # <--- ИЗМЕНЕНИЕ №2: Добавляем шаг для надежной загрузки списка Adaway.
+      # Добавляем шаг для надежной загрузки списка Adaway.
       - name: Prepare and Download adaway list for local processing
         run: |
           cd generate-geoip-geosite || exit 1
@@ -126,8 +123,6 @@ jobs:
           message: "Updated ${{ env.DATE }}"
           add: "singbox"
           cwd: "./my_repo"
-
-      # --- ВЕСЬ ОСТАЛЬНОЙ КОД ОСТАЕТСЯ АБСОЛЮТНО БЕЗ ИЗМЕНЕНИЙ ---
 
       # STEP 2: GENERATE GEOSITES .DAT FILES TO XRAY
       - name: Checkout v2ray-geosite repository
