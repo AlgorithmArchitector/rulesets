@@ -41,16 +41,9 @@ jobs:
           echo "Current Directory: $PWD"
           mkdir -p singbox-inputs
 
-          cat << EOF > singbox-inputs/adaway.json
-          [
-            {
-              "path": "adaway_downloaded.txt",
-              "contentType": "HostsFile",
-              "category": "adaway"
-            }
-          ]
-          EOF
+          # <--- ИЗМЕНЕНИЕ №1: Полностью удаляем создание adaway.json. Он больше не нужен.
 
+          # JSON-файлы для torrents и antifilter остаются без изменений.
           cat << EOF > singbox-inputs/torrents.json
           [
             {
@@ -86,10 +79,15 @@ jobs:
           ]
           EOF
 
-      - name: Download schakal.ru list using wget
+      # <--- ИЗМЕНЕНИЕ №2: Новый шаг для подготовки и скачивания файла для adaway.
+      - name: Prepare and Download adaway list for local processing
         run: |
           cd generate-geoip-geosite || exit 1
-          wget -O adaway_downloaded.txt "https://schakal.ru/hosts/alive_hosts_mail_fb.txt"
+          # Создаем специальную папку для локального файла
+          mkdir -p adaway-local-input
+          # Скачиваем файл с помощью wget и сохраняем его с именем, которое понимает программа:
+          # {include/exclude}-{ip/domain}-{category_name}.lst
+          wget -O adaway-local-input/include-domain-adaway.lst "https://schakal.ru/hosts/alive_hosts_mail_fb.txt"
 
       - name: Output the contents of the singbox-inputs folder
         run: |
@@ -102,13 +100,12 @@ jobs:
           cd ${{ github.workspace }}/generate-geoip-geosite
           go build .
           
-          # Generation of Adaway singbox lists
-          ./generate-geoip-geosite -s singbox-inputs/adaway.json -i ../my_repo/singbox/adaway -o ../my_repo/singbox/adaway --gen-rule-set-srs
+          # <--- ИЗМЕНЕНИЕ №3: Запускаем генерацию для adaway в режиме локальных файлов (флаг -i).
+          # Программа возьмет файл из папки adaway-local-input и обработает его.
+          ./generate-geoip-geosite -i ./adaway-local-input -o ../my_repo/singbox/adaway --gen-rule-set-srs
           
-          # Generating Torrents singbox lists
+          # Генерация для остальных списков остается в режиме скачивания (флаг -s), как и раньше.
           ./generate-geoip-geosite -s singbox-inputs/torrents.json -i ../my_repo/singbox/torrents -o ../my_repo/singbox/torrents --gen-rule-set-srs
-          
-          # Generating Antifilter singbox lists
           ./generate-geoip-geosite -s singbox-inputs/antifilter.json -i ../my_repo/singbox/antifilter -o ../my_repo/singbox/antifilter --gen-rule-set-srs
   
       - name: Output the list of generated .srs files
@@ -137,6 +134,8 @@ jobs:
           add: "singbox"
           cwd: "./my_repo"
 
+      # --- Вся остальная часть файла (STEP 2 и STEP 3) остается абсолютно без изменений ---
+
       # STEP 2: GENERATE GEOSITES .DAT FILES TO XRAY
       - name: Checkout v2ray-geosite repository
         uses: actions/checkout@v4
@@ -157,21 +156,13 @@ jobs:
           mkdir -p input/adaway
           mkdir -p input/torrents
           mkdir -p input/antifilter_community
-
-          # Load adaway.lst list and generate .dat file
           cp ../my_repo/singbox/adaway/include-domain-adaway.lst input/adaway/adaway.lst
           go run main.go --datapath=./input/adaway --outputdir=../my_repo/xray/adaway --exportlists=adaway.lst --outputname=adaway.dat
-          
-          # Loading .lst lists of torrents and generating .dat file
           cp ../my_repo/singbox/torrents/include-domain-torrent_trackers.lst input/torrents/torrent_trackers.lst
           cp ../my_repo/singbox/torrents/include-domain-torrent_websites.lst input/torrents/torrent_websites.lst
           go run main.go --datapath=./input/torrents --outputdir=../my_repo/xray/torrents --exportlists=torrent_trackers.lst,torrent_websites.lst --outputname=torrents.dat
-
-          # Loading antifilter community .lst lists and generating .dat file
           cp ../my_repo/singbox/antifilter/include-domain-antifilter_community_domain.lst input/antifilter_community/antifilter_community_domain.lst
           go run main.go --datapath=./input/antifilter_community --outputdir=../my_repo/xray/antifilter --exportlists=antifilter_community_domain.lst --outputname=antifilter_community_domain.dat
-
-          # Переходим в корневую папку и удаляем папку v2ray-geosite
           cd ../ && rm -rf v2ray-geosite
 
       - name: Output the list of generated geosite .dat files
@@ -211,7 +202,6 @@ jobs:
         run: |
           cd v2ray-geoip || exit 1
           echo "Current Directory: $PWD"
-
           cat << EOF > config.json
           {
             "input": [
