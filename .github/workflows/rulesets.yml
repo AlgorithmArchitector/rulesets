@@ -1,9 +1,7 @@
 name: Generating rulesets
 
 on:
-  # Позволяет запускать вручную из интерфейса GitHub
   workflow_dispatch:
-  # Запускает автоматически каждый день в 00:00 UTC
   schedule:
     - cron: "0 0 * * *"
 
@@ -20,70 +18,107 @@ jobs:
         with:
           path: my_repo
 
-      # --- ОБЩАЯ ПОДГОТОВКА ---
-      # Устанавливаем Go один раз для всех последующих шагов, чтобы не делать это трижды.
-      - name: Setup Go environment
-        uses: actions/setup-go@v5
-        with:
-          go-version: '1.21' # Можно указать конкретную версию для стабильности
-
-      # ===================================================================
-      #  ШАГ 1: ГЕНЕРАЦИЯ ПРАВИЛ ДЛЯ SING-BOX (.SRS, .LST)
-      # ===================================================================
-
-      - name: Checkout generator tool for Sing-box
+      # STEP 1: GENERATE .SRS FILES TO SINGBOX
+      - name: Checkout generate-geoip-geosite repo
         uses: actions/checkout@v4
         with:
           repository: Dunamis4tw/generate-geoip-geosite
           path: generate-geoip-geosite
 
-      - name: Create source files for generator
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: generate-geoip-geosite/go.mod
+
+      - name: Create a folder for singbox lists
+        run: |
+          cd my_repo || exit 1
+          mkdir -p singbox
+
+      - name: Creating json data sources for generating .srs lists
         run: |
           cd generate-geoip-geosite || exit 1
+          echo "Current Directory: $PWD"
           mkdir -p singbox-inputs
 
-          # Для torrents и antifilter оставляем стандартный метод скачивания через JSON
+          # <--- ИЗМЕНЕНИЕ №1: Мы больше не создаем adaway.json, так как будем обрабатывать этот список по-другому.
+          # cat << EOF > singbox-inputs/adaway.json ... был удален отсюда.
+
           cat << EOF > singbox-inputs/torrents.json
           [
-            { "url": "https://raw.githubusercontent.com/sakib-m/Pi-hole-Torrent-Blocklist/main/all-torrent-trackers.txt", "contentType": "DefaultList", "category": "torrent_trackers" },
-            { "url": "https://raw.githubusercontent.com/sakib-m/Pi-hole-Torrent-Blocklist/main/all-torrent-websites.txt", "contentType": "DefaultList", "category": "torrent_websites" }
+            {
+              "url": "https://raw.githubusercontent.com/sakib-m/Pi-hole-Torrent-Blocklist/main/all-torrent-trackers.txt",
+              "contentType": "DefaultList",
+              "category": "torrent_trackers"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/sakib-m/Pi-hole-Torrent-Blocklist/main/all-torrent-websites.txt",
+              "contentType": "DefaultList",
+              "category": "torrent_websites"
+            }
           ]
           EOF
           cat << EOF > singbox-inputs/antifilter.json
           [
-            { "url": "https://antifilter.download/list/allyouneed.lst", "contentType": "DefaultList", "category": "antifilter_allyouneed" },
-            { "url": "https://community.antifilter.download/list/domains.lst", "contentType": "DefaultList", "category": "antifilter_community_domain" },
-            { "url": "https://community.antifilter.download/list/community.lst", "contentType": "DefaultList", "category": "antifilter_community_ip" }
+            {
+              "url": "https://antifilter.download/list/allyouneed.lst",
+              "contentType": "DefaultList",
+              "category": "antifilter_allyouneed"
+            },
+            {
+              "url": "https://community.antifilter.download/list/domains.lst",
+              "contentType": "DefaultList",
+              "category": "antifilter_community_domain"
+            },
+            {
+              "url": "https://community.antifilter.download/list/community.lst",
+              "contentType": "DefaultList",
+              "category": "antifilter_community_ip"
+            }
           ]
           EOF
 
-      # --- Особый случай для Adaway ---
-      # Сервер schakal.ru работает нестабильно со встроенным загрузчиком Go.
-      # Поэтому мы скачиваем список надежным wget, а затем передаем его в генератор как локальный файл.
+      # <--- ИЗМЕНЕНИЕ №2: Добавляем шаг для надежной загрузки списка Adaway.
       - name: Prepare and Download adaway list for local processing
         run: |
           cd generate-geoip-geosite || exit 1
           mkdir -p adaway-local-input
           wget -O adaway-local-input/include-domain-adaway.lst "https://schakal.ru/hosts/alive_hosts_mail_fb.txt"
-
-      - name: Generate .srs lists for Sing-box
+          
+      - name: Output the contents of the singbox-inputs folder
         run: |
-          cd generate-geoip-geosite
+          echo "A list of created data sources for generating .srs lists:"
+          ls -R ${{ github.workspace }}/generate-geoip-geosite/singbox-inputs
+          echo "------------------------------"
+  
+      - name: Generating .srs lists for singbox
+        run: |
+          cd ${{ github.workspace }}/generate-geoip-geosite
           go build .
           
-          # Для adaway используем режим локальных файлов (флаг -i)
+          # <--- ИЗМЕНЕНИЕ №3: Запускаем генератор для Adaway в режиме локальных файлов (флаг -i).
           ./generate-geoip-geosite -i ./adaway-local-input -o ../my_repo/singbox/adaway --gen-rule-set-srs
           
-          # Для остальных - стандартный режим скачивания (флаг -s)
+          # Генерация для остальных списков остается в исходном, рабочем виде.
           ./generate-geoip-geosite -s singbox-inputs/torrents.json -i ../my_repo/singbox/torrents -o ../my_repo/singbox/torrents --gen-rule-set-srs
           ./generate-geoip-geosite -s singbox-inputs/antifilter.json -i ../my_repo/singbox/antifilter -o ../my_repo/singbox/antifilter --gen-rule-set-srs
   
-      - name: Set update timestamp
+      - name: Output the list of generated .srs files
+        run: |
+          echo "adaway:"
+          ls ${{ github.workspace }}/my_repo/singbox/adaway
+          echo "------------------------------"
+          echo "torrents:"
+          ls ${{ github.workspace }}/my_repo/singbox/torrents
+          echo "------------------------------"  
+          echo "antifilter:"
+          ls ${{ github.workspace }}/my_repo/singbox/antifilter
+          echo "------------------------------"
+      - name: Set a variable with date and time
         id: date
         run: |
           echo "DATE=$(TZ=Europe/Moscow date +'%d.%m.%Y %H:%M')" >> $GITHUB_ENV
-
-      - name: Commit and push changes to SINGBOX folder
+      - name: Committing and pushing changes to SINGBOX folder to github
         uses: EndBug/add-and-commit@v9
         with:
           author_name: "GitHub Action"
@@ -92,29 +127,53 @@ jobs:
           add: "singbox"
           cwd: "./my_repo"
 
-      # ===================================================================
-      #  ШАГ 2: ГЕНЕРАЦИЯ ФАЙЛОВ ДОМЕНОВ ДЛЯ XRAY (GEOSITE .DAT)
-      # ===================================================================
+      # --- ВЕСЬ ОСТАЛЬНОЙ КОД ОСТАЕТСЯ АБСОЛЮТНО БЕЗ ИЗМЕНЕНИЙ ---
 
-      - name: Checkout geosite generator tool for Xray
+      # STEP 2: GENERATE GEOSITES .DAT FILES TO XRAY
+      - name: Checkout v2ray-geosite repository
         uses: actions/checkout@v4
         with:
           repository: v2fly/domain-list-community
           path: v2ray-geosite
 
-      - name: Build geosite .dat files for Xray
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: v2ray-geosite/go.mod
+
+      - name: Build geosite .dat files
         run: |
-          cd v2ray-geosite
-          # Используем .lst файлы, сгенерированные на ШАГЕ 1, как источник данных
-          cp ../my_repo/singbox/adaway/include-domain-adaway.lst ./input/adaway.lst
-          cp ../my_repo/singbox/torrents/include-domain-torrent_trackers.lst ./input/torrent_trackers.lst
-          cp ../my_repo/singbox/torrents/include-domain-torrent_websites.lst ./input/torrent_websites.lst
-          cp ../my_repo/singbox/antifilter/include-domain-antifilter_community_domain.lst ./input/antifilter_community_domain.lst
-
-          go run main.go --datapath=./input --outputdir=../my_repo/xray/
-          # Старая логика с раздельными папками и вызовами была избыточна, этот инструмент может обработать все сразу.
-
-      - name: Commit and push GEOSITE changes to XRAY folder
+          cd v2ray-geosite || exit 1
+          echo "Current Directory: $PWD"
+          mkdir -p input
+          mkdir -p input/adaway
+          mkdir -p input/torrents
+          mkdir -p input/antifilter_community
+          # Load adaway.lst list and generate .dat file
+          cp ../my_repo/singbox/adaway/include-domain-adaway.lst input/adaway/adaway.lst
+          go run main.go --datapath=./input/adaway --outputdir=../my_repo/xray/adaway --exportlists=adaway.lst --outputname=adaway.dat
+          
+          # Loading .lst lists of torrents and generating .dat file
+          cp ../my_repo/singbox/torrents/include-domain-torrent_trackers.lst input/torrents/torrent_trackers.lst
+          cp ../my_repo/singbox/torrents/include-domain-torrent_websites.lst input/torrents/torrent_websites.lst
+          go run main.go --datapath=./input/torrents --outputdir=../my_repo/xray/torrents --exportlists=torrent_trackers.lst,torrent_websites.lst --outputname=torrents.dat
+          # Loading antifilter community .lst lists and generating .dat file
+          cp ../my_repo/singbox/antifilter/include-domain-antifilter_community_domain.lst input/antifilter_community/antifilter_community_domain.lst
+          go run main.go --datapath=./input/antifilter_community --outputdir=../my_repo/xray/antifilter --exportlists=antifilter_community_domain.lst --outputname=antifilter_community_domain.dat
+          # Переходим в корневую папку и удаляем папку v2ray-geosite
+          cd ../ && rm -rf v2ray-geosite
+      - name: Output the list of generated geosite .dat files
+        run: |
+          echo "adaway:"
+          ls ${{ github.workspace }}/my_repo/xray/adaway
+          echo "------------------------------"
+          echo "torrents:"
+          ls ${{ github.workspace }}/my_repo/xray/torrents
+          echo "------------------------------"
+          echo "antifilter:"
+          ls ${{ github.workspace }}/my_repo/xray/antifilter
+          echo "------------------------------"
+      - name: Committing and pushing changes to XRAY folder to github (geosite files)
         uses: EndBug/add-and-commit@v9
         with:
           author_name: "GitHub Action"
@@ -123,38 +182,88 @@ jobs:
           add: "xray"
           cwd: "./my_repo"
     
-      # ===================================================================
-      #  ШАГ 3: ГЕНЕРАЦИЯ ФАЙЛОВ IP-АДРЕСОВ ДЛЯ XRAY (GEOIP .DAT)
-      # ===================================================================
-
-      - name: Checkout geoip generator tool for Xray
+      # STEP 3: GENERATE GEOIP .DAT FILES TO XRAY
+      - name: Checkout v2ray-geoip repository
         uses: actions/checkout@v4
         with:
           repository: v2fly/geoip
           path: v2ray-geoip 
 
-      - name: Create source config for geoip generator
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: v2ray-geoip/go.mod
+
+      - name: Creating a configuration json file for geoip
         run: |
-          cd v2ray-geoip
+          cd v2ray-geoip || exit 1
+          echo "Current Directory: $PWD"
           cat << EOF > config.json
           {
             "input": [
-              { "type": "text", "action": "add", "args": { "name": "antifilter_allyouneed_ip", "uri": "https://antifilter.download/list/allyouneed.lst" } },
-              { "type": "text", "action": "add", "args": { "name": "antifilter_community_ip", "uri": "https://community.antifilter.download/list/community.lst" } }
+              {
+                "type": "text",
+                "action": "add",
+                "args": {
+                  "name": "antifilter_allyouneed_ip",
+                  "uri": "https://antifilter.download/list/allyouneed.lst"
+                }
+              },
+              {
+                "type": "text",
+                "action": "add",
+                "args": {
+                  "name": "antifilter_community_ip",
+                  "uri": "https://community.antifilter.download/list/community.lst"
+                }
+              }
             ],
             "output": [
-              { "type": "v2rayGeoIPDat", "action": "output", "args": { "outputName": "antifilter_allyouneed_ip.dat", "wantedList": ["antifilter_allyouneed_ip"], "outputDir": "../my_repo/xray/antifilter" } },
-              { "type": "v2rayGeoIPDat", "action": "output", "args": { "outputName": "antifilter_community_ip.dat", "wantedList": ["antifilter_community_ip"], "outputDir": "../my_repo/xray/antifilter" } }
+              {
+                "type": "v2rayGeoIPDat",
+                "action": "output",
+                "args": {
+                  "outputName": "antifilter_allyouneed_ip.dat",
+                  "wantedList": ["antifilter_allyouneed_ip"],
+                  "outputDir": "../my_repo/xray/antifilter"
+                }
+              },
+              {
+                "type": "v2rayGeoIPDat",
+                "action": "output",
+                "args": {
+                  "outputName": "antifilter_community_ip.dat",
+                  "wantedList": ["antifilter_community_ip"],
+                  "outputDir": "../my_repo/xray/antifilter"
+                }
+              },
+              {
+                "type": "text",
+                "action": "output",
+                "args": {
+                  "wantedList": ["antifilter_allyouneed_ip", "antifilter_community_ip"],
+                  "outputDir": "../my_repo/xray/antifilter"
+                }
+              }
             ]
           }
           EOF
-
-      - name: Build geoip .dat files for Xray
+      - name: Build geoip .dat files
         run: |
-          cd v2ray-geoip
+          cd v2ray-geoip || exit 1
           go run ./
-
-      - name: Commit and push GEOIP changes to XRAY folder
+      - name: Output the list of generated geosite .dat lists
+        run: |
+          echo "adaway:"
+          ls ${{ github.workspace }}/my_repo/xray/adaway
+          echo "------------------------------"
+          echo "torrents:"
+          ls ${{ github.workspace }}/my_repo/xray/torrents
+          echo "------------------------------"
+          echo "antifilter:"
+          ls ${{ github.workspace }}/my_repo/xray/antifilter
+          echo "------------------------------"
+      - name: Committing and pushing changes to XRAY folder to github (geoip files)
         uses: EndBug/add-and-commit@v9
         with:
           author_name: "GitHub Action"
@@ -163,10 +272,7 @@ jobs:
           add: "xray"
           cwd: "./my_repo"
 
-      # ===================================================================
-      #  ШАГ 4: УВЕДОМЛЕНИЕ ОБ ОШИБКАХ
-      # ===================================================================
-      - name: Send notification to Telegram on failure
+      - name: Send a notification to Telegram when an error is detected
         if: failure()
         uses: appleboy/telegram-action@master
         with:
