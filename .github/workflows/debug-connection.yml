@@ -1,0 +1,51 @@
+name: Debug Download Connection
+
+# Этот триггер позволяет запускать экшен вручную с помощью кнопки в интерфейсе GitHub
+on:
+  workflow_dispatch:
+
+jobs:
+  debug-download:
+    runs-on: ubuntu-latest
+    # Эта опция очень важна для отладки:
+    # она заставит экшен выполнить ВСЕ шаги, даже если какой-то из них упадет с ошибкой
+    continue-on-error: true
+
+    steps:
+      - name: 1. Test with default Curl (simulates your script)
+        run: |
+          echo "================================================="
+          echo "ШАГ 1: Стандартный запрос с помощью curl."
+          echo "Ожидаем, что этот шаг завершится с той же ошибкой, что и у вас."
+          echo "================================================="
+          # Флаг -v (verbose) покажет все детали соединения
+          # Флаг -L следует по редиректам
+          # Флаг -o /dev/null чтобы не выводить содержимое файла в лог
+          curl -vL "https://schakal.ru/hosts/alive_hosts_mail_fb.txt" -o /dev/null
+
+      - name: 2. Test with a Browser User-Agent
+        run: |
+          echo "================================================="
+          echo "ШАГ 2: Проверяем, не блокирует ли сервер по User-Agent."
+          echo "Притворяемся обычным браузером Chrome."
+          echo "================================================="
+          # Флаг -A устанавливает заголовок User-Agent
+          curl -vL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" "https://schakal.ru/hosts/alive_hosts_mail_fb.txt" -o /dev/null
+
+      - name: 3. Test forcing HTTP/1.1 protocol
+        run: |
+          echo "================================================="
+          echo "ШАГ 3: Проверяем гипотезу о проблеме с протоколом HTTP/2."
+          echo "Принудительно используем старый, но более стабильный протокол HTTP/1.1."
+          echo "================================================="
+          # Флаг --http1.1 заставляет curl использовать указанную версию протокола
+          curl -vL --http1.1 "https://schakal.ru/hosts/alive_hosts_mail_fb.txt" -o /dev/null
+          
+      - name: 4. Test with Wget (alternative tool)
+        run: |
+          echo "================================================="
+          echo "ШАГ 4: Пробуем скачать с помощью другого инструмента - wget."
+          echo "Wget часто бывает более устойчив к сетевым проблемам."
+          echo "================================================="
+          # Флаг -O /dev/null чтобы не сохранять файл
+          wget "https://schakal.ru/hosts/alive_hosts_mail_fb.txt" -O /dev/null
