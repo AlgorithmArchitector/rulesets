@@ -44,7 +44,7 @@ jobs:
           cat << EOF > singbox-inputs/adaway.json
           [
             {
-              "url": "https://schakal.ru/hosts/alive_hosts_mail_fb.txt",
+              "path": "adaway_downloaded.txt",
               "contentType": "HostsFile",
               "category": "adaway"
             }
@@ -85,6 +85,11 @@ jobs:
             }
           ]
           EOF
+
+      - name: Download schakal.ru list using wget
+        run: |
+          cd generate-geoip-geosite || exit 1
+          wget -O adaway_downloaded.txt "https://schakal.ru/hosts/alive_hosts_mail_fb.txt"
 
       - name: Output the contents of the singbox-inputs folder
         run: |
