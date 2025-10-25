@@ -412,6 +412,7 @@ domain:tracker.privateseedbox.xyz
 domain:tracker.publicbt.com
 domain:tracker.publictracker.xyz
 domain:tracker.pussytorrents.org
+domain:tracker.qingwa.pro
 domain:tracker.qu.ax
 domain:tracker.renfei.net
 domain:tracker.rescuecrew7.com
@@ -424,6 +425,7 @@ domain:tracker.sloppyta.co
 domain:tracker.srv00.com
 domain:tracker.startwork.cv
 domain:tracker.swateam.org.uk
+domain:tracker.t-1.org
 domain:tracker.tambovnet.org
 domain:tracker.tamersunion.org
 domain:tracker.tasvideos.org
