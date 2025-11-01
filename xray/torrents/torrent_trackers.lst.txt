@@ -405,6 +405,7 @@ domain:tracker.parrotsec.org
 domain:tracker.pcfreetime.com
 domain:tracker.pirateparty.gr
 domain:tracker.piratepublic.com
+domain:tracker.playground.ru
 domain:tracker.plx.im
 domain:tracker.pmman.tech
 domain:tracker.pomf.se
