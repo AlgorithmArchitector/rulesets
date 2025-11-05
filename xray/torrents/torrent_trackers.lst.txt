@@ -274,6 +274,7 @@ domain:torrentzilla.org
 domain:tp.m-team.cc
 domain:tr-rh-zhuqiy.dgj055.icu
 domain:tr-zhuqiy-1.dgj055.icu
+domain:tr-zhuqiy-2.dgj055.icu
 domain:tr.abiir.top
 domain:tr.abir.ga
 domain:tr.bangumi.moe

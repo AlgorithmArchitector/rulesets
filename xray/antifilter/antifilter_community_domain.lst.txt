@@ -460,6 +460,7 @@ domain:yeggi.com
 domain:youtu.be
 domain:yt3.googleusercontent.com
 domain:zetflix.online
+domain:zimbra.com
 domain:zimbra.org
 domain:znanija.com
 domain:zohomail.com
