@@ -481,11 +481,13 @@ domain:tracker1.520.jp
 domain:tracker1.bt.moack.co.kr
 domain:tracker1.itzmx.com
 domain:tracker1.myporn.club
+domain:tracker1.t-1.org
 domain:tracker2.christianbro.pw
 domain:tracker2.dler.org
 domain:tracker2.indowebster.com
 domain:tracker2.itzmx.com
 domain:tracker3.itzmx.com
+domain:tracker3.t-1.org
 domain:tracker4.itzmx.com
 domain:tracker6.dler.org
 domain:tracker6.lelux.fi
