@@ -168,6 +168,7 @@ domain:grazie.ai
 domain:grok.com
 domain:gulagu.net
 domain:habr.com
+domain:happycolorapp.com
 domain:hd.zetfix.online
 domain:hdkinoteatr.com
 domain:hdrezka.fm
