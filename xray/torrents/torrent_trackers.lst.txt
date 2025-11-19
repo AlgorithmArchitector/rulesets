@@ -44,6 +44,7 @@ domain:bithq.org
 domain:bitseduce.com
 domain:bitsparadise.info
 domain:bittorrent-tracker.e-n-c-r-y-p-t.net
+domain:bittracker.nekosunevr.co.uk
 domain:biztorrents.com
 domain:blackcats-games.net
 domain:blackz.ro
