@@ -294,6 +294,7 @@ domain:tracker-v6.zooki.xyz
 domain:tracker-zhuqiy.dgj055.icu
 domain:tracker.0o.is
 domain:tracker.0x.tf
+domain:tracker.0x7c0.com
 domain:tracker.1h.is
 domain:tracker.23794.top
 domain:tracker.36dm.com
@@ -347,6 +348,7 @@ domain:tracker.filemail.com
 domain:tracker.filepit.to
 domain:tracker.files.fm
 domain:tracker.flashtorrents.org
+domain:tracker.flatuslifir.is
 domain:tracker.fnix.net
 domain:tracker.foreverpirates.co
 domain:tracker.fortu.io
