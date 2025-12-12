@@ -1071,7 +1071,6 @@ domain:geotorrents.com
 domain:gerusama.fansub-torrents.com
 domain:get.geo.opera.com
 domain:getdstudio.cc
-domain:getdstudio.cc1-thepiratebay.org
 domain:gfxxtra.unblocked.llc
 domain:ghost-city.biz
 domain:gigatorrents.ws
@@ -2654,7 +2653,6 @@ domain:torrentfilmes.net
 domain:torrentfinder.ru
 domain:torrentfr.org
 domain:torrentfrancais.com
-domain:torrentfreak.com
 domain:torrentfreakz.org
 domain:torrentfriend.net
 domain:torrentfunk.com
