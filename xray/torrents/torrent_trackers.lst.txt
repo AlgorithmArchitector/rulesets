@@ -405,6 +405,7 @@ domain:tracker.nyap2p.com
 domain:tracker.ololosh.space
 domain:tracker.open-internet.nl
 domain:tracker.openbittorrent.com
+domain:tracker.opentorrent.top
 domain:tracker.opentracker.se
 domain:tracker.opentrackr.org
 domain:tracker.parrotlinux.org
