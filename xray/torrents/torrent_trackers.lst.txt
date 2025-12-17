@@ -159,6 +159,7 @@ domain:mma-tracker.org
 domain:movies.zsw.ca
 domain:mvgroup.org
 domain:nagios.tks.sumy.ua
+domain:node01.trackerstatus.live
 domain:novaopcj.icu
 domain:ns-1.x-fins.com
 domain:ns3109441.mypdns.org
