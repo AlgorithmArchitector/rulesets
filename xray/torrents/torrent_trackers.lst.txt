@@ -526,6 +526,7 @@ domain:wassermann.online
 domain:wegkxfcivgx.ydns.eu
 domain:wepzone.net
 domain:worldboxingvideoarchive.com
+domain:www.2600.com
 domain:www.all4nothin.net
 domain:www.genesis-sp.org
 domain:www.loushao.net
