@@ -243,6 +243,7 @@ domain:mouser.com
 domain:mrakopedia.net
 domain:my.atlassian.com
 domain:myworld-portal.leica-geosystems.com
+domain:naps2.com
 domain:nasvsehtoshnit.ru
 domain:navalny.com
 domain:netapp.com
