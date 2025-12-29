@@ -320,6 +320,7 @@ domain:tracker.bitcoinindia.space
 domain:tracker.bittor.pw
 domain:tracker.bittorrent.am
 domain:tracker.blacksparrowmedia.net
+domain:tracker.bluefrog.pw
 domain:tracker.breizh.pm
 domain:tracker.bt-hash.com
 domain:tracker.bt4g.com
