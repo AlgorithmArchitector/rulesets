@@ -436,6 +436,7 @@ domain:tracker.skillindia.site
 domain:tracker.skynetcloud.site
 domain:tracker.skyts.net
 domain:tracker.sloppyta.co
+domain:tracker.soshifanclub.com
 domain:tracker.srv00.com
 domain:tracker.startwork.cv
 domain:tracker.swateam.org.uk
