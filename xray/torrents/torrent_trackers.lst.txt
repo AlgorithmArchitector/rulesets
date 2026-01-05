@@ -86,6 +86,7 @@ domain:chihaya.toss.li
 domain:cn.pcfreetime.com
 domain:cny.fan
 domain:code2chicken.nl
+domain:colivioo.com
 domain:concen.org
 domain:cutiegirl.ru
 domain:d40969.acod.regrucolo.ru
