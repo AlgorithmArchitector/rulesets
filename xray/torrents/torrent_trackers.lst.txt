@@ -134,6 +134,7 @@ domain:ipv6.tracker.harry.lu
 domain:ipv6.tracker.zerobytes.xyz
 domain:isk.richardsw.club
 domain:jsb.by
+domain:jvavav.com
 domain:k.avc.cx
 domain:kanal-4.de
 domain:kinorun.com
@@ -385,6 +386,7 @@ domain:tracker.iochimari.moe
 domain:tracker.iperson.xyz
 domain:tracker.ipv6tracker.org
 domain:tracker.ipv6tracker.ru
+domain:tracker.ixuexi.click
 domain:tracker.jdx3.org
 domain:tracker.kali.org
 domain:tracker.kamigami.org
