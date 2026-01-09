@@ -328,6 +328,7 @@ domain:tracker.bt-hash.com
 domain:tracker.bt4g.com
 domain:tracker.btnext.com
 domain:tracker.btsync.gq
+domain:tracker.bug38.com
 domain:tracker.bz
 domain:tracker.cangku.moe
 domain:tracker.chaoz.li
@@ -352,6 +353,7 @@ domain:tracker.electro-torrent.pl
 domain:tracker.etree.org
 domain:tracker.ex.ua
 domain:tracker.expli.top
+domain:tracker.file09.com
 domain:tracker.filemail.com
 domain:tracker.filepit.to
 domain:tracker.files.fm
