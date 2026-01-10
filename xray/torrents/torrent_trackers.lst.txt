@@ -418,6 +418,7 @@ domain:tracker.openbittorrent.com
 domain:tracker.opentorrent.top
 domain:tracker.opentracker.se
 domain:tracker.opentrackr.org
+domain:tracker.orsvarn.com
 domain:tracker.parrotlinux.org
 domain:tracker.parrotsec.org
 domain:tracker.pcfreetime.com
