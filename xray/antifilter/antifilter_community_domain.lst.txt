@@ -276,6 +276,7 @@ domain:packages.gitlab.com
 domain:pages.dev
 domain:pandasecurity.com
 domain:paperpaper.ru
+domain:parallels.com
 domain:path3.xtracloud.net
 domain:patreon.com
 domain:pay.buckaroo.nl

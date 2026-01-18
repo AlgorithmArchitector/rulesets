@@ -398,6 +398,7 @@ domain:tracker.leechers-paradise.org
 domain:tracker.leechshield.link
 domain:tracker.lelux.fi
 domain:tracker.lintk.me
+domain:tracker.maya.no.eu.org
 domain:tracker.minglong.org
 domain:tracker.mininova.org
 domain:tracker.moeblog.cn
