@@ -150,6 +150,7 @@ domain:fork.pet
 domain:forklog.com
 domain:formula1.com
 domain:forum.voynaplemyon.com
+domain:freecodecamp.org
 domain:fw-download.ubnt.com
 domain:fw-update.ubnt.com
 domain:gallery.zetalliance.org
