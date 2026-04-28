@@ -149,14 +149,14 @@ jobs:
           # cp ../my_repo/singbox/adaway/include-domain-adaway.lst input/adaway/adaway.lst
           # go run main.go --datapath=./input/adaway --outputdir=../my_repo/xray/adaway --exportlists=adaway.lst --outputname=adaway.dat
           
-          # Loading .lst lists of torrents and generating .dat file
-          cp ../my_repo/singbox/torrents/include-domain-torrent_trackers.lst input/torrents/torrent_trackers.lst
-          cp ../my_repo/singbox/torrents/include-domain-torrent_websites.lst input/torrents/torrent_websites.lst
-          go run main.go --datapath=./input/torrents --outputdir=../my_repo/xray/torrents --exportlists=torrent_trackers.lst,torrent_websites.lst --outputname=torrents.dat
+          # Loading torrents lists and generating .dat file (БЕЗ расширения .lst)
+          cp ../my_repo/singbox/torrents/include-domain-torrent_trackers.lst input/torrents/torrent_trackers
+          cp ../my_repo/singbox/torrents/include-domain-torrent_websites.lst input/torrents/torrent_websites
+          go run main.go --datapath=./input/torrents --outputdir=../my_repo/xray/torrents --exportlists=torrent_trackers,torrent_websites --outputname=torrents.dat
           
-          # Loading antifilter community .lst lists and generating .dat file
-          cp ../my_repo/singbox/antifilter/include-domain-antifilter_community_domain.lst input/antifilter_community/antifilter_community_domain.lst
-          go run main.go --datapath=./input/antifilter_community --outputdir=../my_repo/xray/antifilter --exportlists=antifilter_community_domain.lst --outputname=antifilter_community_domain.dat
+          # Loading antifilter community list and generating .dat file (БЕЗ расширения .lst)
+          cp ../my_repo/singbox/antifilter/include-domain-antifilter_community_domain.lst input/antifilter_community/antifilter_community_domain
+          go run main.go --datapath=./input/antifilter_community --outputdir=../my_repo/xray/antifilter --exportlists=antifilter_community_domain --outputname=antifilter_community_domain.dat
           
           # Переходим в корневую папку и удаляем папку v2ray-geosite
           cd ../ && rm -rf v2ray-geosite
