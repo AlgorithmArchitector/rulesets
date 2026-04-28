@@ -75,43 +75,80 @@ jobs:
           ]
           EOF
 
-      # Загрузка adaway списка с retry механизмом
+      # Загрузка adaway списка с retry и разными методами
       - name: Prepare and Download adaway list for local processing
         run: |
           cd generate-geoip-geosite || exit 1
           mkdir -p adaway-local-input
           
-          # Пробуем загрузить с schakal.ru с несколькими попытками
           echo "Downloading from schakal.ru..."
           SUCCESS=false
           
-          for i in {1..5}; do
-            echo "Attempt $i of 5..."
-            if wget --timeout=60 --tries=3 --waitretry=10 --retry-connrefused \
+          # Попытка 1-2: wget с User-Agent
+          for i in {1..2}; do
+            echo "Attempt $i (wget with User-Agent)..."
+            if wget --timeout=60 --tries=2 \
                     --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
                     -O adaway-local-input/include-domain-adaway.lst \
-                    "https://schakal.ru/hosts/alive_hosts_mail_fb.txt"; then
-              echo "Successfully downloaded from schakal.ru"
-              SUCCESS=true
-              break
-            else
-              echo "Attempt $i failed"
-              if [ $i -lt 5 ]; then
-                echo "Waiting 10 seconds before retry..."
-                sleep 10
+                    "https://schakal.ru/hosts/alive_hosts_mail_fb.txt" 2>&1; then
+              if [ -f adaway-local-input/include-domain-adaway.lst ] && [ -s adaway-local-input/include-domain-adaway.lst ]; then
+                echo "✅ Successfully downloaded with wget"
+                SUCCESS=true
+                break
               fi
             fi
+            echo "Attempt $i failed"
+            sleep 5
           done
           
-          # Проверяем, что файл загружен успешно
+          # Попытка 3-4: curl с User-Agent
+          if [ "$SUCCESS" = false ]; then
+            for i in {3..4}; do
+              echo "Attempt $i (curl with User-Agent)..."
+              if curl -L --max-time 60 \
+                      -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
+                      -o adaway-local-input/include-domain-adaway.lst \
+                      "https://schakal.ru/hosts/alive_hosts_mail_fb.txt" 2>&1; then
+                if [ -f adaway-local-input/include-domain-adaway.lst ] && [ -s adaway-local-input/include-domain-adaway.lst ]; then
+                  echo "✅ Successfully downloaded with curl"
+                  SUCCESS=true
+                  break
+                fi
+              fi
+              echo "Attempt $i failed"
+              sleep 5
+            done
+          fi
+          
+          # Попытка 5: curl с HTTP/1.1
+          if [ "$SUCCESS" = false ]; then
+            echo "Attempt 5 (curl with HTTP/1.1)..."
+            if curl -L --http1.1 --max-time 60 \
+                    -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
+                    -o adaway-local-input/include-domain-adaway.lst \
+                    "https://schakal.ru/hosts/alive_hosts_mail_fb.txt" 2>&1; then
+              if [ -f adaway-local-input/include-domain-adaway.lst ] && [ -s adaway-local-input/include-domain-adaway.lst ]; then
+                echo "✅ Successfully downloaded with curl HTTP/1.1"
+                SUCCESS=true
+              fi
+            fi
+          fi
+          
+          # Проверка результата
           if [ "$SUCCESS" = false ] || [ ! -f adaway-local-input/include-domain-adaway.lst ] || [ ! -s adaway-local-input/include-domain-adaway.lst ]; then
-            echo "ERROR: Failed to download adaway list from schakal.ru after 5 attempts"
+            echo ""
+            echo "❌ ERROR: Failed to download adaway list after all attempts"
+            echo "This GitHub runner may have network restrictions to schakal.ru"
+            echo ""
+            echo "Solutions:"
+            echo "1. Re-run the workflow (may get a different runner)"
+            echo "2. Use cached list (see ADAWAY_CACHE_INSTRUCTIONS.md)"
             exit 1
           fi
           
-          echo "Adaway list downloaded successfully"
-          echo "File size:"
-          ls -lh adaway-local-input/include-domain-adaway.lst
+          echo ""
+          echo "✅ Adaway list downloaded successfully"
+          echo "File size: $(wc -l < adaway-local-input/include-domain-adaway.lst) lines"
 
       - name: Output the contents of the singbox-inputs folder
         run: |
