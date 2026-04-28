@@ -4,8 +4,9 @@
 > Атообновляемые списки для Xray ядра в формате .dat
 
 <br> <!-- Пустая строка -->
- 
+
 > [**adaway**](https://4pda.to/forum/index.php?showtopic=275091&st=8000#Spoil-89665467-4)  (Список для блокировки рекламы от Schakal):
+
 - [adaway.dat](https://github.com/AlgorithmArchitector/rulesets/blob/main/xray/adaway/adaway.dat)
 
 <br> <!-- Пустая строка -->
@@ -27,28 +28,31 @@
 **Пример использования `.dat` списков:**
 
 > **geosites:**
-```
+
+```json
 {
-            "outboundTag": "BLOCK",
-            "domain": [
-                "ext:adaway.dat:adaway.lst",
-                "ext:torrents.dat:torrent_trackers.lst",
-                "ext:torrents.dat:torrent_websites.lst",
-                "ext:antifilter_community_domain.dat:antifilter_community_domain.lst"
-            ],
-            "type": "field"
-        }
+    "outboundTag": "BLOCK",
+    "domain": [
+        "ext:adaway.dat:adaway",
+        "ext:torrents.dat:torrenttrackers",
+        "ext:torrents.dat:torrentwebsites",
+        "ext:antifilter_community_domain.dat:antifiltercommunitydomain"
+    ],
+    "type": "field"
+}
 ```
 
 > **geoip:**
-```
+
+```json
 {
-            "outboundTag": "BLOCK",
-            "ip": [
-                "ext:antifilter_allyouneed_ip.dat:antifilter_allyouneed_ip",
-                "ext:antifilter_community_ip.dat:antifilter_community_ip"
-            ],
-            "type": "field"
-        }
+    "outboundTag": "BLOCK",
+    "ip": [
+        "ext:antifilter_allyouneed_ip.dat:antifilter_allyouneed_ip",
+        "ext:antifilter_community_ip.dat:antifilter_community_ip"
+    ],
+    "type": "field"
+}
 ```
+
 
