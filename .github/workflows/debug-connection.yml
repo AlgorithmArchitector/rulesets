@@ -1,199 +1,167 @@
-name: Debug Adaway Download
+name: Debug Geosite Generation
 
-# Запускается вручную через интерфейс GitHub
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
-  test-download:
+  debug-generation:
     runs-on: ubuntu-latest
-    
     steps:
-      - name: Test 1 - Default wget (как в старом экшене)
-        continue-on-error: true
-        run: |
-          echo "================================================="
-          echo "ТЕСТ 1: Стандартный wget без параметров"
-          echo "================================================="
-          wget -O /tmp/test1.txt "https://schakal.ru/hosts/alive_hosts_mail_fb.txt"
-          if [ -f /tmp/test1.txt ]; then
-            echo "✅ Файл загружен"
-            echo "Размер: $(wc -l < /tmp/test1.txt) строк"
-          else
-            echo "❌ Файл не загружен"
-          fi
+      - name: Checkout my repo
+        uses: actions/checkout@v2
+        with:
+          path: my_repo
 
-      - name: Test 2 - wget с User-Agent браузера
-        continue-on-error: true
-        run: |
-          echo "================================================="
-          echo "ТЕСТ 2: wget с User-Agent браузера Chrome"
-          echo "================================================="
-          wget --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
-               -O /tmp/test2.txt \
-               "https://schakal.ru/hosts/alive_hosts_mail_fb.txt"
-          if [ -f /tmp/test2.txt ]; then
-            echo "✅ Файл загружен"
-            echo "Размер: $(wc -l < /tmp/test2.txt) строк"
-          else
-            echo "❌ Файл не загружен"
-          fi
+      - name: Checkout generate-geoip-geosite repo
+        uses: actions/checkout@v4
+        with:
+          repository: Dunamis4tw/generate-geoip-geosite
+          path: generate-geoip-geosite
 
-      - name: Test 3 - wget с увеличенным таймаутом
-        continue-on-error: true
-        run: |
-          echo "================================================="
-          echo "ТЕСТ 3: wget с таймаутом 60 секунд и 3 попытками"
-          echo "================================================="
-          wget --timeout=60 --tries=3 --waitretry=10 \
-               -O /tmp/test3.txt \
-               "https://schakal.ru/hosts/alive_hosts_mail_fb.txt"
-          if [ -f /tmp/test3.txt ]; then
-            echo "✅ Файл загружен"
-            echo "Размер: $(wc -l < /tmp/test3.txt) строк"
-          else
-            echo "❌ Файл не загружен"
-          fi
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: generate-geoip-geosite/go.mod
 
-      - name: Test 4 - wget с User-Agent + таймаут + retry
-        continue-on-error: true
+      - name: Create folders
         run: |
-          echo "================================================="
-          echo "ТЕСТ 4: wget с User-Agent + таймаут + retry"
-          echo "================================================="
-          wget --timeout=60 --tries=3 --waitretry=10 --retry-connrefused \
-               --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
-               -O /tmp/test4.txt \
-               "https://schakal.ru/hosts/alive_hosts_mail_fb.txt"
-          if [ -f /tmp/test4.txt ]; then
-            echo "✅ Файл загружен"
-            echo "Размер: $(wc -l < /tmp/test4.txt) строк"
-          else
-            echo "❌ Файл не загружен"
-          fi
+          cd my_repo || exit 1
+          mkdir -p singbox/torrents
 
-      - name: Test 5 - curl с User-Agent
-        continue-on-error: true
+      - name: Create test data source
         run: |
-          echo "================================================="
-          echo "ТЕСТ 5: curl с User-Agent браузера"
-          echo "================================================="
-          curl -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
-               -o /tmp/test5.txt \
-               "https://schakal.ru/hosts/alive_hosts_mail_fb.txt"
-          if [ -f /tmp/test5.txt ]; then
-            echo "✅ Файл загружен"
-            echo "Размер: $(wc -l < /tmp/test5.txt) строк"
-          else
-            echo "❌ Файл не загружен"
-          fi
-
-      - name: Test 6 - curl с HTTP/1.1
-        continue-on-error: true
-        run: |
-          echo "================================================="
-          echo "ТЕСТ 6: curl с принудительным HTTP/1.1"
-          echo "================================================="
-          curl -L --http1.1 \
-               -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
-               -o /tmp/test6.txt \
-               "https://schakal.ru/hosts/alive_hosts_mail_fb.txt"
-          if [ -f /tmp/test6.txt ]; then
-            echo "✅ Файл загружен"
-            echo "Размер: $(wc -l < /tmp/test6.txt) строк"
-          else
-            echo "❌ Файл не загружен"
-          fi
-
-      - name: Test 7 - wget с verbose для диагностики
-        continue-on-error: true
-        run: |
-          echo "================================================="
-          echo "ТЕСТ 7: wget с подробным выводом (verbose)"
-          echo "================================================="
-          wget -v --timeout=60 --tries=3 \
-               --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
-               -O /tmp/test7.txt \
-               "https://schakal.ru/hosts/alive_hosts_mail_fb.txt"
-          if [ -f /tmp/test7.txt ]; then
-            echo "✅ Файл загружен"
-            echo "Размер: $(wc -l < /tmp/test7.txt) строк"
-          else
-            echo "❌ Файл не загружен"
-          fi
-
-      - name: Test 8 - Проверка DNS резолвинга
-        continue-on-error: true
-        run: |
-          echo "================================================="
-          echo "ТЕСТ 8: Проверка DNS резолвинга schakal.ru"
-          echo "================================================="
-          echo "Резолвим домен:"
-          nslookup schakal.ru || true
-          echo ""
-          echo "Пингуем домен (3 пакета):"
-          ping -c 3 schakal.ru || true
-
-      - name: Test 9 - wget с 5 попытками и паузами (финальный тест)
-        continue-on-error: true
-        run: |
-          echo "================================================="
-          echo "ТЕСТ 9: wget с 5 попытками и паузами между ними"
-          echo "Это финальный тест - имитация того, что будет в основном экшене"
-          echo "================================================="
+          cd generate-geoip-geosite || exit 1
+          mkdir -p singbox-inputs
           
-          SUCCESS=false
-          for i in {1..5}; do
-            echo "Попытка $i из 5..."
-            if wget --timeout=60 --tries=3 --waitretry=10 --retry-connrefused \
-                    --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
-                    -O /tmp/test9.txt \
-                    "https://schakal.ru/hosts/alive_hosts_mail_fb.txt"; then
-              echo "✅ Успешно загружено на попытке $i"
-              SUCCESS=true
-              break
-            else
-              echo "❌ Попытка $i не удалась"
-              if [ $i -lt 5 ]; then
-                echo "Ждём 10 секунд перед следующей попыткой..."
-                sleep 10
-              fi
+          cat << EOF > singbox-inputs/torrents.json
+          [
+            {
+              "url": "https://raw.githubusercontent.com/sakib-m/Pi-hole-Torrent-Blocklist/main/all-torrent-trackers.txt",
+              "contentType": "DefaultList",
+              "category": "torrent_trackers"
+            }
+          ]
+          EOF
+
+      - name: Generate .srs files
+        run: |
+          cd generate-geoip-geosite || exit 1
+          go build .
+          ./generate-geoip-geosite -s singbox-inputs/torrents.json -i ../my_repo/singbox/torrents -o ../my_repo/singbox/torrents --gen-rule-set-srs
+
+      - name: DEBUG 1 - Show generated files in singbox/torrents
+        run: |
+          echo "================================================="
+          echo "ФАЙЛЫ ПОСЛЕ ГЕНЕРАЦИИ .SRS"
+          echo "================================================="
+          ls -la ${{ github.workspace }}/my_repo/singbox/torrents
+          echo ""
+          echo "Содержимое первых 5 строк каждого файла:"
+          echo ""
+          for file in ${{ github.workspace }}/my_repo/singbox/torrents/*; do
+            if [ -f "$file" ]; then
+              echo "--- Файл: $(basename $file) ---"
+              head -n 5 "$file" || echo "Бинарный файл"
+              echo ""
             fi
           done
-          
-          if [ "$SUCCESS" = true ] && [ -f /tmp/test9.txt ] && [ -s /tmp/test9.txt ]; then
-            echo ""
-            echo "================================================="
-            echo "✅✅✅ ФИНАЛЬНЫЙ ТЕСТ УСПЕШЕН ✅✅✅"
-            echo "================================================="
-            echo "Размер файла: $(wc -l < /tmp/test9.txt) строк"
-            echo "Первые 5 строк файла:"
-            head -n 5 /tmp/test9.txt
-          else
-            echo ""
-            echo "================================================="
-            echo "❌❌❌ ФИНАЛЬНЫЙ ТЕСТ НЕ УДАЛСЯ ❌❌❌"
-            echo "================================================="
-            exit 1
-          fi
 
-      - name: Итоговый отчёт
-        if: always()
+      - name: Checkout v2ray-geosite repository
+        uses: actions/checkout@v4
+        with:
+          repository: v2fly/domain-list-community
+          path: v2ray-geosite
+
+      - name: Setup Go for v2ray-geosite
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: v2ray-geosite/go.mod
+
+      - name: Prepare input folder for v2ray-geosite
         run: |
+          cd v2ray-geosite || exit 1
+          mkdir -p input/torrents
+
+      - name: DEBUG 2 - Test different file naming strategies
+        run: |
+          cd v2ray-geosite || exit 1
+          echo "================================================="
+          echo "ТЕСТ 1: Копируем с расширением .lst"
+          echo "================================================="
+          cp ../my_repo/singbox/torrents/include-domain-torrent_trackers.lst input/torrents/torrent_trackers.lst
+          ls -la input/torrents/
+          echo ""
+          echo "Пробуем запустить v2ray-geosite..."
+          go run main.go --datapath=./input/torrents --outputdir=../my_repo/xray/test1 --exportlists=torrent_trackers.lst --outputname=test1.dat 2>&1 || echo "ОШИБКА в тесте 1"
+          echo ""
+          
+          echo "================================================="
+          echo "ТЕСТ 2: Копируем БЕЗ расширения"
+          echo "================================================="
+          rm -rf input/torrents/*
+          cp ../my_repo/singbox/torrents/include-domain-torrent_trackers.lst input/torrents/torrent_trackers
+          ls -la input/torrents/
+          echo ""
+          echo "Пробуем запустить v2ray-geosite..."
+          go run main.go --datapath=./input/torrents --outputdir=../my_repo/xray/test2 --exportlists=torrent_trackers --outputname=test2.dat 2>&1 || echo "ОШИБКА в тесте 2"
+          echo ""
+          
+          echo "================================================="
+          echo "ТЕСТ 3: Копируем в нижнем регистре БЕЗ расширения"
+          echo "================================================="
+          rm -rf input/torrents/*
+          cp ../my_repo/singbox/torrents/include-domain-torrent_trackers.lst input/torrents/torrenttrackers
+          ls -la input/torrents/
+          echo ""
+          echo "Пробуем запустить v2ray-geosite..."
+          go run main.go --datapath=./input/torrents --outputdir=../my_repo/xray/test3 --exportlists=torrenttrackers --outputname=test3.dat 2>&1 || echo "ОШИБКА в тесте 3"
+          echo ""
+          
+          echo "================================================="
+          echo "ТЕСТ 4: Проверяем формат файла"
+          echo "================================================="
+          echo "Первые 10 строк исходного файла:"
+          head -n 10 ../my_repo/singbox/torrents/include-domain-torrent_trackers.lst
+          echo ""
+          echo "Проверяем кодировку:"
+          file ../my_repo/singbox/torrents/include-domain-torrent_trackers.lst
+          echo ""
+
+      - name: DEBUG 3 - Check v2ray-geosite version and requirements
+        run: |
+          cd v2ray-geosite || exit 1
+          echo "================================================="
+          echo "ВЕРСИЯ v2ray-geosite"
+          echo "================================================="
+          git log -1 --oneline
           echo ""
           echo "================================================="
-          echo "ИТОГОВЫЙ ОТЧЁТ"
+          echo "СОДЕРЖИМОЕ go.mod"
           echo "================================================="
-          echo "Проверяем какие тесты создали файлы:"
-          echo ""
-          for i in {1..9}; do
-            if [ -f /tmp/test$i.txt ] && [ -s /tmp/test$i.txt ]; then
-              echo "✅ Тест $i: УСПЕШНО ($(wc -l < /tmp/test$i.txt) строк)"
-            else
-              echo "❌ Тест $i: НЕУДАЧНО"
-            fi
-          done
+          cat go.mod
           echo ""
           echo "================================================="
-          echo "Рекомендация: используй метод из успешного теста"
+          echo "СПРАВКА ПО ПАРАМЕТРАМ"
+          echo "================================================="
+          go run main.go --help || echo "Справка недоступна"
+
+      - name: DEBUG 4 - Show results
+        run: |
+          echo "================================================="
+          echo "РЕЗУЛЬТАТЫ ТЕСТОВ"
+          echo "================================================="
+          echo "Тест 1 (с .lst):"
+          ls -la ${{ github.workspace }}/my_repo/xray/test1 2>/dev/null || echo "Папка не создана - тест провалился"
+          echo ""
+          echo "Тест 2 (без расширения):"
+          ls -la ${{ github.workspace }}/my_repo/xray/test2 2>/dev/null || echo "Папка не создана - тест провалился"
+          echo ""
+          echo "Тест 3 (нижний регистр без расширения):"
+          ls -la ${{ github.workspace }}/my_repo/xray/test3 2>/dev/null || echo "Папка не создана - тест провалился"
+          echo ""
+          echo "================================================="
+          echo "ИТОГ: Какой тест сработал?"
           echo "================================================="
