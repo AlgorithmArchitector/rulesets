@@ -1,51 +1,199 @@
-name: Debug Download Connection
+name: Debug Adaway Download
 
-# Этот триггер позволяет запускать экшен вручную с помощью кнопки в интерфейсе GitHub
+# Запускается вручную через интерфейс GitHub
 on:
   workflow_dispatch:
 
 jobs:
-  debug-download:
+  test-download:
     runs-on: ubuntu-latest
-    # Эта опция очень важна для отладки:
-    # она заставит экшен выполнить ВСЕ шаги, даже если какой-то из них упадет с ошибкой
-    continue-on-error: true
-
+    
     steps:
-      - name: 1. Test with default Curl (simulates your script)
+      - name: Test 1 - Default wget (как в старом экшене)
+        continue-on-error: true
         run: |
           echo "================================================="
-          echo "ШАГ 1: Стандартный запрос с помощью curl."
-          echo "Ожидаем, что этот шаг завершится с той же ошибкой, что и у вас."
+          echo "ТЕСТ 1: Стандартный wget без параметров"
           echo "================================================="
-          # Флаг -v (verbose) покажет все детали соединения
-          # Флаг -L следует по редиректам
-          # Флаг -o /dev/null чтобы не выводить содержимое файла в лог
-          curl -vL "https://schakal.ru/hosts/alive_hosts_mail_fb.txt" -o /dev/null
+          wget -O /tmp/test1.txt "https://schakal.ru/hosts/alive_hosts_mail_fb.txt"
+          if [ -f /tmp/test1.txt ]; then
+            echo "✅ Файл загружен"
+            echo "Размер: $(wc -l < /tmp/test1.txt) строк"
+          else
+            echo "❌ Файл не загружен"
+          fi
 
-      - name: 2. Test with a Browser User-Agent
+      - name: Test 2 - wget с User-Agent браузера
+        continue-on-error: true
         run: |
           echo "================================================="
-          echo "ШАГ 2: Проверяем, не блокирует ли сервер по User-Agent."
-          echo "Притворяемся обычным браузером Chrome."
+          echo "ТЕСТ 2: wget с User-Agent браузера Chrome"
           echo "================================================="
-          # Флаг -A устанавливает заголовок User-Agent
-          curl -vL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" "https://schakal.ru/hosts/alive_hosts_mail_fb.txt" -o /dev/null
+          wget --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
+               -O /tmp/test2.txt \
+               "https://schakal.ru/hosts/alive_hosts_mail_fb.txt"
+          if [ -f /tmp/test2.txt ]; then
+            echo "✅ Файл загружен"
+            echo "Размер: $(wc -l < /tmp/test2.txt) строк"
+          else
+            echo "❌ Файл не загружен"
+          fi
 
-      - name: 3. Test forcing HTTP/1.1 protocol
+      - name: Test 3 - wget с увеличенным таймаутом
+        continue-on-error: true
         run: |
           echo "================================================="
-          echo "ШАГ 3: Проверяем гипотезу о проблеме с протоколом HTTP/2."
-          echo "Принудительно используем старый, но более стабильный протокол HTTP/1.1."
+          echo "ТЕСТ 3: wget с таймаутом 60 секунд и 3 попытками"
           echo "================================================="
-          # Флаг --http1.1 заставляет curl использовать указанную версию протокола
-          curl -vL --http1.1 "https://schakal.ru/hosts/alive_hosts_mail_fb.txt" -o /dev/null
+          wget --timeout=60 --tries=3 --waitretry=10 \
+               -O /tmp/test3.txt \
+               "https://schakal.ru/hosts/alive_hosts_mail_fb.txt"
+          if [ -f /tmp/test3.txt ]; then
+            echo "✅ Файл загружен"
+            echo "Размер: $(wc -l < /tmp/test3.txt) строк"
+          else
+            echo "❌ Файл не загружен"
+          fi
+
+      - name: Test 4 - wget с User-Agent + таймаут + retry
+        continue-on-error: true
+        run: |
+          echo "================================================="
+          echo "ТЕСТ 4: wget с User-Agent + таймаут + retry"
+          echo "================================================="
+          wget --timeout=60 --tries=3 --waitretry=10 --retry-connrefused \
+               --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
+               -O /tmp/test4.txt \
+               "https://schakal.ru/hosts/alive_hosts_mail_fb.txt"
+          if [ -f /tmp/test4.txt ]; then
+            echo "✅ Файл загружен"
+            echo "Размер: $(wc -l < /tmp/test4.txt) строк"
+          else
+            echo "❌ Файл не загружен"
+          fi
+
+      - name: Test 5 - curl с User-Agent
+        continue-on-error: true
+        run: |
+          echo "================================================="
+          echo "ТЕСТ 5: curl с User-Agent браузера"
+          echo "================================================="
+          curl -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
+               -o /tmp/test5.txt \
+               "https://schakal.ru/hosts/alive_hosts_mail_fb.txt"
+          if [ -f /tmp/test5.txt ]; then
+            echo "✅ Файл загружен"
+            echo "Размер: $(wc -l < /tmp/test5.txt) строк"
+          else
+            echo "❌ Файл не загружен"
+          fi
+
+      - name: Test 6 - curl с HTTP/1.1
+        continue-on-error: true
+        run: |
+          echo "================================================="
+          echo "ТЕСТ 6: curl с принудительным HTTP/1.1"
+          echo "================================================="
+          curl -L --http1.1 \
+               -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
+               -o /tmp/test6.txt \
+               "https://schakal.ru/hosts/alive_hosts_mail_fb.txt"
+          if [ -f /tmp/test6.txt ]; then
+            echo "✅ Файл загружен"
+            echo "Размер: $(wc -l < /tmp/test6.txt) строк"
+          else
+            echo "❌ Файл не загружен"
+          fi
+
+      - name: Test 7 - wget с verbose для диагностики
+        continue-on-error: true
+        run: |
+          echo "================================================="
+          echo "ТЕСТ 7: wget с подробным выводом (verbose)"
+          echo "================================================="
+          wget -v --timeout=60 --tries=3 \
+               --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
+               -O /tmp/test7.txt \
+               "https://schakal.ru/hosts/alive_hosts_mail_fb.txt"
+          if [ -f /tmp/test7.txt ]; then
+            echo "✅ Файл загружен"
+            echo "Размер: $(wc -l < /tmp/test7.txt) строк"
+          else
+            echo "❌ Файл не загружен"
+          fi
+
+      - name: Test 8 - Проверка DNS резолвинга
+        continue-on-error: true
+        run: |
+          echo "================================================="
+          echo "ТЕСТ 8: Проверка DNS резолвинга schakal.ru"
+          echo "================================================="
+          echo "Резолвим домен:"
+          nslookup schakal.ru || true
+          echo ""
+          echo "Пингуем домен (3 пакета):"
+          ping -c 3 schakal.ru || true
+
+      - name: Test 9 - wget с 5 попытками и паузами (финальный тест)
+        continue-on-error: true
+        run: |
+          echo "================================================="
+          echo "ТЕСТ 9: wget с 5 попытками и паузами между ними"
+          echo "Это финальный тест - имитация того, что будет в основном экшене"
+          echo "================================================="
           
-      - name: 4. Test with Wget (alternative tool)
+          SUCCESS=false
+          for i in {1..5}; do
+            echo "Попытка $i из 5..."
+            if wget --timeout=60 --tries=3 --waitretry=10 --retry-connrefused \
+                    --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
+                    -O /tmp/test9.txt \
+                    "https://schakal.ru/hosts/alive_hosts_mail_fb.txt"; then
+              echo "✅ Успешно загружено на попытке $i"
+              SUCCESS=true
+              break
+            else
+              echo "❌ Попытка $i не удалась"
+              if [ $i -lt 5 ]; then
+                echo "Ждём 10 секунд перед следующей попыткой..."
+                sleep 10
+              fi
+            fi
+          done
+          
+          if [ "$SUCCESS" = true ] && [ -f /tmp/test9.txt ] && [ -s /tmp/test9.txt ]; then
+            echo ""
+            echo "================================================="
+            echo "✅✅✅ ФИНАЛЬНЫЙ ТЕСТ УСПЕШЕН ✅✅✅"
+            echo "================================================="
+            echo "Размер файла: $(wc -l < /tmp/test9.txt) строк"
+            echo "Первые 5 строк файла:"
+            head -n 5 /tmp/test9.txt
+          else
+            echo ""
+            echo "================================================="
+            echo "❌❌❌ ФИНАЛЬНЫЙ ТЕСТ НЕ УДАЛСЯ ❌❌❌"
+            echo "================================================="
+            exit 1
+          fi
+
+      - name: Итоговый отчёт
+        if: always()
         run: |
+          echo ""
           echo "================================================="
-          echo "ШАГ 4: Пробуем скачать с помощью другого инструмента - wget."
-          echo "Wget часто бывает более устойчив к сетевым проблемам."
+          echo "ИТОГОВЫЙ ОТЧЁТ"
           echo "================================================="
-          # Флаг -O /dev/null чтобы не сохранять файл
-          wget "https://schakal.ru/hosts/alive_hosts_mail_fb.txt" -O /dev/null
+          echo "Проверяем какие тесты создали файлы:"
+          echo ""
+          for i in {1..9}; do
+            if [ -f /tmp/test$i.txt ] && [ -s /tmp/test$i.txt ]; then
+              echo "✅ Тест $i: УСПЕШНО ($(wc -l < /tmp/test$i.txt) строк)"
+            else
+              echo "❌ Тест $i: НЕУДАЧНО"
+            fi
+          done
+          echo ""
+          echo "================================================="
+          echo "Рекомендация: используй метод из успешного теста"
+          echo "================================================="
