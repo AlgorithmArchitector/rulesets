@@ -11,7 +11,6 @@ permissions:
 jobs:
   generate-lists:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout my repo
         uses: actions/checkout@v2
@@ -40,7 +39,7 @@ jobs:
           cd generate-geoip-geosite || exit 1
           echo "Current Directory: $PWD"
           mkdir -p singbox-inputs
-
+          
           cat << EOF > singbox-inputs/torrents.json
           [
             {
@@ -55,6 +54,7 @@ jobs:
             }
           ]
           EOF
+          
           cat << EOF > singbox-inputs/antifilter.json
           [
             {
@@ -75,31 +75,62 @@ jobs:
           ]
           EOF
 
-      # Добавляем шаг для надежной загрузки списка Adaway.
+      # Загрузка adaway списка с retry механизмом
       - name: Prepare and Download adaway list for local processing
         run: |
           cd generate-geoip-geosite || exit 1
           mkdir -p adaway-local-input
-          wget -O adaway-local-input/include-domain-adaway.lst "https://schakal.ru/hosts/alive_hosts_mail_fb.txt"
           
+          # Пробуем загрузить с schakal.ru с несколькими попытками
+          echo "Downloading from schakal.ru..."
+          SUCCESS=false
+          
+          for i in {1..5}; do
+            echo "Attempt $i of 5..."
+            if wget --timeout=60 --tries=3 --waitretry=10 --retry-connrefused \
+                    --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
+                    -O adaway-local-input/include-domain-adaway.lst \
+                    "https://schakal.ru/hosts/alive_hosts_mail_fb.txt"; then
+              echo "Successfully downloaded from schakal.ru"
+              SUCCESS=true
+              break
+            else
+              echo "Attempt $i failed"
+              if [ $i -lt 5 ]; then
+                echo "Waiting 10 seconds before retry..."
+                sleep 10
+              fi
+            fi
+          done
+          
+          # Проверяем, что файл загружен успешно
+          if [ "$SUCCESS" = false ] || [ ! -f adaway-local-input/include-domain-adaway.lst ] || [ ! -s adaway-local-input/include-domain-adaway.lst ]; then
+            echo "ERROR: Failed to download adaway list from schakal.ru after 5 attempts"
+            exit 1
+          fi
+          
+          echo "Adaway list downloaded successfully"
+          echo "File size:"
+          ls -lh adaway-local-input/include-domain-adaway.lst
+
       - name: Output the contents of the singbox-inputs folder
         run: |
           echo "A list of created data sources for generating .srs lists:"
           ls -R ${{ github.workspace }}/generate-geoip-geosite/singbox-inputs
           echo "------------------------------"
-  
+
       - name: Generating .srs lists for singbox
         run: |
           cd ${{ github.workspace }}/generate-geoip-geosite
           go build .
           
-          # <--- ИЗМЕНЕНИЕ №3: Запускаем генератор для Adaway в режиме локальных файлов (флаг -i).
+          # Генерация для Adaway в режиме локальных файлов
           ./generate-geoip-geosite -i ./adaway-local-input -o ../my_repo/singbox/adaway --gen-rule-set-srs
           
-          # Генерация для остальных списков остается в исходном, рабочем виде.
+          # Генерация для остальных списков
           ./generate-geoip-geosite -s singbox-inputs/torrents.json -i ../my_repo/singbox/torrents -o ../my_repo/singbox/torrents --gen-rule-set-srs
           ./generate-geoip-geosite -s singbox-inputs/antifilter.json -i ../my_repo/singbox/antifilter -o ../my_repo/singbox/antifilter --gen-rule-set-srs
-  
+
       - name: Output the list of generated .srs files
         run: |
           echo "adaway:"
@@ -111,10 +142,12 @@ jobs:
           echo "antifilter:"
           ls ${{ github.workspace }}/my_repo/singbox/antifilter
           echo "------------------------------"
+
       - name: Set a variable with date and time
         id: date
         run: |
           echo "DATE=$(TZ=Europe/Moscow date +'%d.%m.%Y %H:%M')" >> $GITHUB_ENV
+
       - name: Committing and pushing changes to SINGBOX folder to github
         uses: EndBug/add-and-commit@v9
         with:
@@ -144,6 +177,7 @@ jobs:
           mkdir -p input/adaway
           mkdir -p input/torrents
           mkdir -p input/antifilter_community
+          
           # Load adaway.lst list and generate .dat file
           cp ../my_repo/singbox/adaway/include-domain-adaway.lst input/adaway/adaway.lst
           go run main.go --datapath=./input/adaway --outputdir=../my_repo/xray/adaway --exportlists=adaway.lst --outputname=adaway.dat
@@ -152,11 +186,14 @@ jobs:
           cp ../my_repo/singbox/torrents/include-domain-torrent_trackers.lst input/torrents/torrent_trackers.lst
           cp ../my_repo/singbox/torrents/include-domain-torrent_websites.lst input/torrents/torrent_websites.lst
           go run main.go --datapath=./input/torrents --outputdir=../my_repo/xray/torrents --exportlists=torrent_trackers.lst,torrent_websites.lst --outputname=torrents.dat
+          
           # Loading antifilter community .lst lists and generating .dat file
           cp ../my_repo/singbox/antifilter/include-domain-antifilter_community_domain.lst input/antifilter_community/antifilter_community_domain.lst
           go run main.go --datapath=./input/antifilter_community --outputdir=../my_repo/xray/antifilter --exportlists=antifilter_community_domain.lst --outputname=antifilter_community_domain.dat
+          
           # Переходим в корневую папку и удаляем папку v2ray-geosite
           cd ../ && rm -rf v2ray-geosite
+
       - name: Output the list of generated geosite .dat files
         run: |
           echo "adaway:"
@@ -168,6 +205,7 @@ jobs:
           echo "antifilter:"
           ls ${{ github.workspace }}/my_repo/xray/antifilter
           echo "------------------------------"
+
       - name: Committing and pushing changes to XRAY folder to github (geosite files)
         uses: EndBug/add-and-commit@v9
         with:
@@ -176,7 +214,7 @@ jobs:
           message: "Updated ${{ env.DATE }}"
           add: "xray"
           cwd: "./my_repo"
-    
+
       # STEP 3: GENERATE GEOIP .DAT FILES TO XRAY
       - name: Checkout v2ray-geoip repository
         uses: actions/checkout@v4
@@ -193,6 +231,7 @@ jobs:
         run: |
           cd v2ray-geoip || exit 1
           echo "Current Directory: $PWD"
+          
           cat << EOF > config.json
           {
             "input": [
@@ -243,10 +282,12 @@ jobs:
             ]
           }
           EOF
+
       - name: Build geoip .dat files
         run: |
           cd v2ray-geoip || exit 1
           go run ./
+
       - name: Output the list of generated geosite .dat lists
         run: |
           echo "adaway:"
@@ -258,6 +299,7 @@ jobs:
           echo "antifilter:"
           ls ${{ github.workspace }}/my_repo/xray/antifilter
           echo "------------------------------"
+
       - name: Committing and pushing changes to XRAY folder to github (geoip files)
         uses: EndBug/add-and-commit@v9
         with:
@@ -274,5 +316,5 @@ jobs:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           message: |
-            ERROR on “rule set generation”
+            ERROR on "rule set generation"
             Repository: ${{ github.repository }}
