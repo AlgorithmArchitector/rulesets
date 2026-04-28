@@ -1,9 +1,7 @@
-name: Generating rulesets
+name: Generating rulesets (without adaway)
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 0 * * *"
 
 permissions:
   contents: write
@@ -75,80 +73,12 @@ jobs:
           ]
           EOF
 
-      # Загрузка adaway списка с retry и разными методами
-      - name: Prepare and Download adaway list for local processing
-        run: |
-          cd generate-geoip-geosite || exit 1
-          mkdir -p adaway-local-input
-          
-          echo "Downloading from schakal.ru..."
-          SUCCESS=false
-          
-          # Попытка 1-2: wget с User-Agent
-          for i in {1..2}; do
-            echo "Attempt $i (wget with User-Agent)..."
-            if wget --timeout=60 --tries=2 \
-                    --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
-                    -O adaway-local-input/include-domain-adaway.lst \
-                    "https://schakal.ru/hosts/alive_hosts_mail_fb.txt" 2>&1; then
-              if [ -f adaway-local-input/include-domain-adaway.lst ] && [ -s adaway-local-input/include-domain-adaway.lst ]; then
-                echo "✅ Successfully downloaded with wget"
-                SUCCESS=true
-                break
-              fi
-            fi
-            echo "Attempt $i failed"
-            sleep 5
-          done
-          
-          # Попытка 3-4: curl с User-Agent
-          if [ "$SUCCESS" = false ]; then
-            for i in {3..4}; do
-              echo "Attempt $i (curl with User-Agent)..."
-              if curl -L --max-time 60 \
-                      -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
-                      -o adaway-local-input/include-domain-adaway.lst \
-                      "https://schakal.ru/hosts/alive_hosts_mail_fb.txt" 2>&1; then
-                if [ -f adaway-local-input/include-domain-adaway.lst ] && [ -s adaway-local-input/include-domain-adaway.lst ]; then
-                  echo "✅ Successfully downloaded with curl"
-                  SUCCESS=true
-                  break
-                fi
-              fi
-              echo "Attempt $i failed"
-              sleep 5
-            done
-          fi
-          
-          # Попытка 5: curl с HTTP/1.1
-          if [ "$SUCCESS" = false ]; then
-            echo "Attempt 5 (curl with HTTP/1.1)..."
-            if curl -L --http1.1 --max-time 60 \
-                    -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
-                    -o adaway-local-input/include-domain-adaway.lst \
-                    "https://schakal.ru/hosts/alive_hosts_mail_fb.txt" 2>&1; then
-              if [ -f adaway-local-input/include-domain-adaway.lst ] && [ -s adaway-local-input/include-domain-adaway.lst ]; then
-                echo "✅ Successfully downloaded with curl HTTP/1.1"
-                SUCCESS=true
-              fi
-            fi
-          fi
-          
-          # Проверка результата
-          if [ "$SUCCESS" = false ] || [ ! -f adaway-local-input/include-domain-adaway.lst ] || [ ! -s adaway-local-input/include-domain-adaway.lst ]; then
-            echo ""
-            echo "❌ ERROR: Failed to download adaway list after all attempts"
-            echo "This GitHub runner may have network restrictions to schakal.ru"
-            echo ""
-            echo "Solutions:"
-            echo "1. Re-run the workflow (may get a different runner)"
-            echo "2. Use cached list (see ADAWAY_CACHE_INSTRUCTIONS.md)"
-            exit 1
-          fi
-          
-          echo ""
-          echo "✅ Adaway list downloaded successfully"
-          echo "File size: $(wc -l < adaway-local-input/include-domain-adaway.lst) lines"
+      # ЗАКОММЕНТИРОВАНО: Загрузка adaway
+      # - name: Prepare and Download adaway list for local processing
+      #   run: |
+      #     cd generate-geoip-geosite || exit 1
+      #     mkdir -p adaway-local-input
+      #     wget -O adaway-local-input/include-domain-adaway.lst "https://schakal.ru/hosts/alive_hosts_mail_fb.txt"
 
       - name: Output the contents of the singbox-inputs folder
         run: |
@@ -161,8 +91,8 @@ jobs:
           cd ${{ github.workspace }}/generate-geoip-geosite
           go build .
           
-          # Генерация для Adaway в режиме локальных файлов
-          ./generate-geoip-geosite -i ./adaway-local-input -o ../my_repo/singbox/adaway --gen-rule-set-srs
+          # ЗАКОММЕНТИРОВАНО: Генерация для Adaway
+          # ./generate-geoip-geosite -i ./adaway-local-input -o ../my_repo/singbox/adaway --gen-rule-set-srs
           
           # Генерация для остальных списков
           ./generate-geoip-geosite -s singbox-inputs/torrents.json -i ../my_repo/singbox/torrents -o ../my_repo/singbox/torrents --gen-rule-set-srs
@@ -170,9 +100,9 @@ jobs:
 
       - name: Output the list of generated .srs files
         run: |
-          echo "adaway:"
-          ls -la ${{ github.workspace }}/my_repo/singbox/adaway
-          echo "------------------------------"
+          # echo "adaway:"
+          # ls ${{ github.workspace }}/my_repo/singbox/adaway
+          # echo "------------------------------"
           echo "torrents:"
           ls -la ${{ github.workspace }}/my_repo/singbox/torrents
           echo "------------------------------"  
@@ -190,7 +120,7 @@ jobs:
         with:
           author_name: "GitHub Action"
           author_email: "action@github.com"
-          message: "Updated ${{ env.DATE }}"
+          message: "Updated ${{ env.DATE }} (without adaway)"
           add: "singbox"
           cwd: "./my_repo"
 
@@ -211,13 +141,13 @@ jobs:
           cd v2ray-geosite || exit 1
           echo "Current Directory: $PWD"
           mkdir -p input
-          mkdir -p input/adaway
+          # mkdir -p input/adaway
           mkdir -p input/torrents
           mkdir -p input/antifilter_community
           
-          # Load adaway list and generate .dat file (БЕЗ расширения и БЕЗ подчёркивания)
-          cp ../my_repo/singbox/adaway/include-domain-adaway.lst input/adaway/adaway
-          go run main.go --datapath=./input/adaway --outputdir=../my_repo/xray/adaway --exportlists=adaway --outputname=adaway.dat
+          # ЗАКОММЕНТИРОВАНО: Load adaway list and generate .dat file
+          # cp ../my_repo/singbox/adaway/include-domain-adaway.lst input/adaway/adaway.lst
+          # go run main.go --datapath=./input/adaway --outputdir=../my_repo/xray/adaway --exportlists=adaway.lst --outputname=adaway.dat
           
           # Loading torrents lists and generating .dat file (БЕЗ расширения и БЕЗ подчёркивания)
           cp ../my_repo/singbox/torrents/include-domain-torrent_trackers.lst input/torrents/torrenttrackers
@@ -233,9 +163,9 @@ jobs:
 
       - name: Output the list of generated geosite .dat files
         run: |
-          echo "adaway:"
-          ls ${{ github.workspace }}/my_repo/xray/adaway
-          echo "------------------------------"
+          # echo "adaway:"
+          # ls ${{ github.workspace }}/my_repo/xray/adaway
+          # echo "------------------------------"
           echo "torrents:"
           ls ${{ github.workspace }}/my_repo/xray/torrents
           echo "------------------------------"
@@ -248,7 +178,7 @@ jobs:
         with:
           author_name: "GitHub Action"
           author_email: "action@github.com"
-          message: "Updated ${{ env.DATE }}"
+          message: "Updated ${{ env.DATE }} (without adaway)"
           add: "xray"
           cwd: "./my_repo"
 
@@ -325,11 +255,11 @@ jobs:
           cd v2ray-geoip || exit 1
           go run ./
 
-      - name: Output the list of generated geosite .dat lists
+      - name: Output the list of generated geoip .dat files
         run: |
-          echo "adaway:"
-          ls ${{ github.workspace }}/my_repo/xray/adaway
-          echo "------------------------------"
+          # echo "adaway:"
+          # ls ${{ github.workspace }}/my_repo/xray/adaway
+          # echo "------------------------------"
           echo "torrents:"
           ls ${{ github.workspace }}/my_repo/xray/torrents
           echo "------------------------------"
@@ -342,7 +272,7 @@ jobs:
         with:
           author_name: "GitHub Action"
           author_email: "action@github.com"
-          message: "Updated ${{ env.DATE }}"
+          message: "Updated ${{ env.DATE }} (without adaway)"
           add: "xray"
           cwd: "./my_repo"
 
@@ -353,5 +283,5 @@ jobs:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           message: |
-            ERROR on "rule set generation"
+            ERROR on "rule set generation (without adaway)"
             Repository: ${{ github.repository }}
